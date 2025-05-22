@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/globals/navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const Author = localFont({
+  src: "../../public/fonts/Author-Medium.otf",
+  variable: "--font-author",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const AuthorNormal = localFont({
+  src: "../../public/fonts/Author-Regular.otf",
+  variable: "--font-author-normal",
 });
 
 export const metadata: Metadata = {
@@ -25,8 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${Author.variable}  antialiased`}
       >
+        <Navbar/>
         {children}
       </body>
     </html>
