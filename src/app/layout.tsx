@@ -8,10 +8,6 @@ const Author = localFont({
   variable: "--font-author",
 });
 
-const AuthorNormal = localFont({
-  src: "../../public/fonts/Author-Regular.otf",
-  variable: "--font-author-normal",
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
