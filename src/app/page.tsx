@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <div>
       <div className="w-full h-screen relative font-[family-name:var(--font-author)] ">
-        <video className="object-cover h-full" autoPlay loop muted>
+        <video className="object-cover w-full h-full" autoPlay loop muted>
           <source src="/hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
