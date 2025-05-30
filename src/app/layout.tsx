@@ -2,12 +2,18 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/globals/navbar";
+import { Fragment_Mono } from "next/font/google";
 
 const Author = localFont({
-  src: "../../public/fonts/Author-font.ttf",
+  src: "../../public/fonts/Author-Medium.otf",
   variable: "--font-author",
 });
 
+const fragment = Fragment_Mono({
+  subsets: ["latin"],
+  variable: "--font-fragment",
+  weight: "400",
+});
 
 export const metadata: Metadata = {
   title: "Luntra-infrastructure",
@@ -22,9 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${Author.variable} antialiased`}
+        className={`${Author.variable} ${fragment.variable} antialiased font-author`}
       >
-        <Navbar/>
+        <Navbar />
         {children}
       </body>
     </html>

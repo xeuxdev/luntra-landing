@@ -1,0 +1,135 @@
+import Image from "next/image";
+import React from "react";
+import { Icons } from "../ui/icons";
+
+export function FeaturesSection() {
+  return (
+    <section className="py-12 sm:py-16 md:py-20 lg:py-[100px] px-4 sm:px-5 space-y-10 sm:space-y-[40px] md:space-y-[60px] min-[1440px]:px-20">
+      <div className="space-y-6 sm:space-y-10">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-[82px] lg:leading-[90%] text-center max-w-full sm:max-w-[650px] md:max-w-[750px] mx-auto font-medium">
+          Built to help Developers{" "}
+          <span className="text-[#FC0609]">build faster</span> with less
+          complexity
+        </h2>
+      </div>
+      {/* bento grid */}
+      <div className="flex flex-col lg:flex-row gap-5 lg:max-h-[1011px]">
+        <div className="w-full lg:flex-[65%] h-full gap-5 flex flex-col">
+          <div className="flex flex-col md:flex-row gap-5">
+            <div className="card-border overflow-hidden bg-black w-full min-w-0 md:min-w-[350px] lg:min-w-[460px] rounded-md py-8 md:py-12 px-5 md:px-7 flex flex-col">
+              <Image
+                src={"/features/ai-transaction.png"}
+                alt="AI Transaction Guardian"
+                className="w-full"
+                width={504}
+                height={504}
+              />
+              <div className="space-y-4 text-center">
+                <header className="text-3xl md:text-4xl leading-[90%]">
+                  AI Transaction Guardian
+                </header>
+                <p className="text-sm md:text-base font-fragment text-white/70">
+                  Our chain uses OpenAI models to detect MEV patterns,
+                  reordering transactions to protect users from sandwich
+                  attacks.
+                </p>
+              </div>
+            </div>
+            <div className="w-full space-y-5">
+              <div className="w-full py-8 md:py-[50px] px-5 md:px-[30px] card-border rounded-md space-y-6 md:space-y-[46px] lg:h-[310.5px]">
+                <Icons.fingerPrint className="mx-auto" />
+
+                <div className="space-y-2.5 text-center">
+                  <header className="text-3xl md:text-4xl leading-[90%]">
+                    Seamless Access
+                  </header>
+                  <p className="text-sm md:text-base">
+                    Access blockchain apps with Web2 simplicity and Web3
+                    security via our account
+                  </p>
+                </div>
+              </div>
+              <div className="w-full py-8 md:py-[50px] px-5 md:px-[30px] card-border rounded-md space-y-6 md:space-y-[46px] relative h-[220px] sm:h-[250px] md:h-[310.5px] flex items-center justify-center">
+                <Image
+                  src={"/features/selective-privacy.png"}
+                  alt="Selective Privacy"
+                  className="-z-10 absolute w-full md:w-[715px] h-full md:h-[318px]"
+                  fill
+                />
+
+                <div className="space-y-2.5 text-center">
+                  <header className="text-3xl md:text-4xl leading-[90%]">
+                    Selective Privacy
+                  </header>
+                  <p className="text-sm md:text-base text-white/70">
+                    Conduct private transactions while maintaining
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="card-border overflow-hidden bg-black w-full rounded-md p-6 md:p-[50px] flex flex-col md:flex-row-reverse items-center lg:h-[350px]">
+            <div className="w-full h-[200px] md:size-full relative">
+              <Image
+                src={"/features/smart-gas.png"}
+                alt="Smart Gas Wizard"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="space-y-4 text-center w-full md:min-w-[336px] md:max-w-[380px] mt-4 md:mt-0">
+              <header className="text-3xl md:text-4xl leading-[90%]">
+                Smart Gas Wizard
+              </header>
+              <p className="text-sm md:text-base font-fragment text-white/70">
+                Our AI gas prediction system analyzes network conditions,
+                recommending optimal gas prices to save users 18% on costs
+                without sacrificing speed.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full lg:flex-[35%] space-y-5 h-full">
+          <div className="w-full py-8 md:py-[50px] px-5 md:px-[30px] card-border rounded-md h-[220px] sm:h-[260px] md:h-[300px] lg:h-[310.5px] relative flex items-center justify-center overflow-hidden">
+            <div className="absolute -top-[280px] size-[548px] -z-10 -right-[320px] rotate-5 hidden sm:block">
+              <Image src={"/features/smart-gas.png"} alt="" fill />
+            </div>
+            <div className="absolute -bottom-[280px] size-[548px] -z-10 -left-[350px] -rotate-87 hidden sm:block">
+              <Image src={"/features/smart-gas.png"} alt="" fill />
+            </div>
+            <div className="space-y-2.5 text-center px-4 md:px-6">
+              <header className="text-3xl md:text-4xl">
+                Implementation Process
+              </header>
+              <p className="text-sm md:text-base text-white/70 lg:px-16">
+                Our system seamlessly integrates with all OP Stack
+              </p>
+            </div>
+          </div>
+
+          <div className="card-border overflow-hidden w-full h-full rounded-md py-8 md:py-12 px-5 md:px-7 flex flex-col gap-8 md:gap-10 lg:h-[680.5px]">
+            <div className="space-y-4 text-center">
+              <header className="text-3xl md:text-4xl leading-[90%]">
+                Contract Shield
+              </header>
+              <p className="text-sm md:text-base font-fragment text-white/70">
+                Our AI scans smart contract code and transactions for
+                vulnerabilities, alerting users to risks before execution.
+              </p>
+            </div>
+
+            <div className="aspect-square relative">
+              <Image
+                src={"/features/contract-shield.png"}
+                alt="Contract Shield"
+                className="w-full"
+                fill
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

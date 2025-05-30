@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import logo from "../../../../public/svgs/logo.svg";
+import logo from "../../../../public/logo.svg";
 import Image from "next/image";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
@@ -14,8 +14,20 @@ export default function Navbar() {
       <div className="w-full flex justify-center items-center">
         <div className="md:w-auto w-full mx-5  md:h-[72px] h-[70px] px-5 py-[15px] bg-black rounded-[40px] flex gap-[60px] justify-between items-center">
           <div className="flex gap-5 items-center">
-            <Image src={logo} alt="logo" />
-            <nav className="md:flex hidden items-center gap-[30px] text-sm font-medium font-[family-name:var(--font-author)] text-[#ffffff] ">
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 0.5C27.665 0.5 35.5 8.33502 35.5 18C35.5 27.665 27.665 35.5 18 35.5C8.33502 35.5 0.5 27.665 0.5 18C0.5 8.33502 8.33502 0.5 18 0.5ZM9.5 18.8174L18.3174 27.6338L27.1338 18.8174L18.3174 10L9.5 18.8174Z"
+                fill="#E16B55"
+              />
+            </svg>
+
+            <nav className="md:flex hidden items-center gap-[30px] text-sm font-medium text-[#ffffff] font-author ">
               <Link href="/">Build</Link>
               <Link href="/">Explore</Link>
               <Link href="/">Ecosystem</Link>
@@ -31,7 +43,7 @@ export default function Navbar() {
               {isMenuOpen ? <IoClose /> : <HiMenuAlt4 />}
             </button>
 
-            <button className="px-5 h-10 rounded-[32px] font-[family-name:var(--font-author)] text-base text-black  bg-white">
+            <button className="px-5 h-10 rounded-[32px] text-base text-black  bg-white">
               Connect
             </button>
           </div>
@@ -46,7 +58,7 @@ export default function Navbar() {
             : "opacity-0 -translate-y-4 pointer-events-none"
         }`}
       >
-        <nav className="flex flex-col gap-6 text-base font-medium font-[family-name:var(--font-author)] text-[#ffffff]">
+        <nav className="flex flex-col gap-6 text-base font-medium font-author text-[#ffffff]">
           <Link href="/" onClick={() => setIsMenuOpen(false)}>
             Build
           </Link>
