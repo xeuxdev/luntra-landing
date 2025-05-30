@@ -1,9 +1,14 @@
 @import "tailwindcss";
 
-body{
+body {
   background-color: #000;
 }
-.btn{
+.btn {
   border-radius: 32px;
-background: radial-gradient(207.48% 111.8% at 0% 50%, #D746F9 0%, #8A34FF 61.89%, #A200E2 100%);
+  background: radial-gradient(
+    207.48% 111.8% at 0% 50%,
+    #d746f9 0%,
+    #8a34ff 61.89%,
+    #a200e2 100%
+  );
 }

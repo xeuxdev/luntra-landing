@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/globals/navbar";
 
 const Author = localFont({
-  src: "../../public/fonts/Author-Medium.otf",
+  src: "../../public/fonts/Author-font.ttf",
   variable: "--font-author",
 });
 
