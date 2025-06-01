@@ -31,6 +31,10 @@ button {
   padding-block: 10px;
   padding-inline: 30px;
   transition: background 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
 }
 
 .btn.primary {
@@ -48,6 +52,14 @@ button {
   &:hover {
     background: #ffffff33;
   }
+}
+
+.btn.tertiary {
+  background-color: #230b12;
+}
+
+.btn.tertiary:hover {
+  background-color: #340001;
 }
 
 .card-border {

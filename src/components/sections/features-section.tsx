@@ -1,22 +1,39 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 import { Icons } from "../ui/icons";
 
 export function FeaturesSection() {
   return (
-    <section className="py-12 sm:py-16 md:py-20 lg:py-[100px] px-4 sm:px-5 space-y-10 sm:space-y-[40px] md:space-y-[60px] min-[1440px]:px-20">
-      <div className="space-y-6 sm:space-y-10">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-[100px] px-4 sm:px-5 space-y-10 sm:space-y-[40px] md:space-y-[60px] min-[1440px]:px-20 max-w-[1280px] mx-auto">
+      <motion.div
+        className="space-y-6 sm:space-y-10"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-[82px] lg:leading-[90%] text-center max-w-full sm:max-w-[650px] md:max-w-[750px] mx-auto font-medium">
           Built to help Developers{" "}
           <span className="text-[#FC0609]">build faster</span> with less
           complexity
         </h2>
-      </div>
-      {/* bento grid */}
+      </motion.div>
+
+      {/* bento grids */}
       <div className="flex flex-col lg:flex-row gap-5 lg:max-h-[1011px]">
         <div className="w-full lg:flex-[65%] h-full gap-5 flex flex-col">
           <div className="flex flex-col md:flex-row gap-5">
-            <div className="card-border overflow-hidden bg-black w-full min-w-0 md:min-w-[350px] lg:min-w-[460px] rounded-md py-8 md:py-12 px-5 md:px-7 flex flex-col">
+            <motion.div
+              className="card-border overflow-hidden bg-black w-full min-w-0 md:min-w-[350px] lg:min-w-[460px] rounded-md py-8 md:py-12 px-5 md:px-7 flex flex-col"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+            >
               <Image
                 src={"/features/ai-transaction.png"}
                 alt="AI Transaction Guardian"
@@ -34,9 +51,16 @@ export function FeaturesSection() {
                   attacks.
                 </p>
               </div>
-            </div>
+            </motion.div>
             <div className="w-full space-y-5">
-              <div className="w-full py-8 md:py-[50px] px-5 md:px-[30px] card-border rounded-md space-y-6 md:space-y-[46px] lg:h-[310.5px]">
+              <motion.div
+                className="w-full py-8 md:py-[50px] px-5 md:px-[30px] card-border rounded-md space-y-6 md:space-y-[46px] lg:h-[310.5px]"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
                 <Icons.fingerPrint className="mx-auto" />
 
                 <div className="space-y-2.5 text-center">
@@ -48,8 +72,15 @@ export function FeaturesSection() {
                     security via our account
                   </p>
                 </div>
-              </div>
-              <div className="w-full py-8 md:py-[50px] px-5 md:px-[30px] card-border rounded-md space-y-6 md:space-y-[46px] relative h-[220px] sm:h-[250px] md:h-[310.5px] flex items-center justify-center">
+              </motion.div>
+              <motion.div
+                className="w-full py-8 md:py-[50px] px-5 md:px-[30px] card-border rounded-md space-y-6 md:space-y-[46px] relative h-[220px] sm:h-[250px] md:h-[310.5px] flex items-center justify-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
                 <Image
                   src={"/features/selective-privacy.png"}
                   alt="Selective Privacy"
@@ -65,10 +96,17 @@ export function FeaturesSection() {
                     Conduct private transactions while maintaining
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
-          <div className="card-border overflow-hidden bg-black w-full rounded-md p-6 md:p-[50px] flex flex-col md:flex-row-reverse items-center lg:h-[350px]">
+          <motion.div
+            className="card-border overflow-hidden bg-black w-full rounded-md p-6 md:p-[50px] flex flex-col md:flex-row-reverse items-center lg:h-[350px]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -5 }}
+          >
             <div className="w-full h-[200px] md:size-full relative">
               <Image
                 src={"/features/smart-gas.png"}
@@ -87,11 +125,18 @@ export function FeaturesSection() {
                 without sacrificing speed.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         <div className="w-full lg:flex-[35%] space-y-5 h-full">
-          <div className="w-full py-8 md:py-[50px] px-5 md:px-[30px] card-border rounded-md h-[220px] sm:h-[260px] md:h-[300px] lg:h-[310.5px] relative flex items-center justify-center overflow-hidden">
+          <motion.div
+            className="w-full py-8 md:py-[50px] px-5 md:px-[30px] card-border rounded-md h-[220px] sm:h-[260px] md:h-[300px] lg:h-[310.5px] relative flex items-center justify-center overflow-hidden"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -5 }}
+          >
             <div className="absolute -top-[280px] size-[548px] -z-10 -right-[320px] rotate-5 hidden sm:block">
               <Image src={"/features/smart-gas.png"} alt="" fill />
             </div>
@@ -106,9 +151,16 @@ export function FeaturesSection() {
                 Our system seamlessly integrates with all OP Stack
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="card-border overflow-hidden w-full h-full rounded-md py-8 md:py-12 px-5 md:px-7 flex flex-col gap-8 md:gap-10 lg:h-[680.5px]">
+          <motion.div
+            className="card-border overflow-hidden w-full h-full rounded-md py-8 md:py-12 px-5 md:px-7 flex flex-col gap-8 md:gap-10 lg:h-[680.5px]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -5 }}
+          >
             <div className="space-y-4 text-center">
               <header className="text-3xl md:text-4xl leading-[90%]">
                 Contract Shield
@@ -127,7 +179,7 @@ export function FeaturesSection() {
                 fill
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

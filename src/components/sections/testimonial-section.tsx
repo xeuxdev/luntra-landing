@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import Marquee from "react-fast-marquee";
 
 export function TestimonialSection() {
   return (
-    <section className="h-auto py-12 sm:py-16 md:py-20 lg:h-[880px] lg:py-0 overflow-hidden">
+    <section className="h-auto py-12 sm:py-16 md:py-20 lg:h-[880px] lg:py-0 overflow-hidden w-fit mx-auto">
       <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 md:gap-16 lg:gap-20 h-full px-4 sm:px-6 lg:px-0">
         {/* Mobile/Tablet Header Section */}
         <div className="lg:hidden text-center space-y-6 sm:space-y-8 py-8 sm:py-12">
@@ -90,107 +91,103 @@ export function TestimonialSection() {
 
         {/* Testimonials Section */}
         <div className="relative h-full w-full">
-          {/* Mobile/Tablet: Single column scrollable */}
-          <div className="lg:hidden space-y-4 sm:space-y-5">
-            {testimonials.map((testimonial, index) => (
-              <div
-                className="w-full max-w-md mx-auto rounded-lg py-6 sm:py-8 px-5 sm:px-6 space-y-6 sm:space-y-8"
-                style={{ backgroundColor: testimonial.bg }}
-                key={index}
-              >
-                <p className="font-normal font-fragment text-base sm:text-lg leading-[135%] text-white">
-                  {testimonial.text}
-                </p>
+          {/* Mobile/Tablet: Horizontal marquee */}
+          <div className="lg:hidden space-y-5">
+            <Marquee gradient={false} speed={30} pauseOnHover={true} loop={0}>
+              {testimonials.map((testimonial, index) => (
+                <Card
+                  testimonial={testimonial}
+                  index={index}
+                  key={`marquee-${index}`}
+                />
+              ))}
+            </Marquee>
 
-                <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="size-[40px] sm:size-[50px] rounded-full overflow-hidden relative">
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      fill
-                    />
-                  </div>
-                  <div>
-                    <p className="text-lg sm:text-xl leading-[90%] text-white">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-white/70 text-sm leading-[135%]">
-                      {testimonial.company}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
+            <Marquee
+              gradient={false}
+              speed={30}
+              pauseOnHover={true}
+              loop={0}
+              direction="right"
+            >
+              {testimonials.map((testimonial, index) => (
+                <Card
+                  testimonial={testimonial}
+                  index={index}
+                  key={`marquee-${index}`}
+                />
+              ))}
+            </Marquee>
           </div>
 
-          {/* Desktop: Two column layout - preserved original styling */}
-          <div className="hidden lg:flex h-full gap-5 vignette">
-            <div className="flex flex-col gap-5">
-              {testimonials.slice(0, 3).map((testimonial, index) => (
-                <div
-                  className="w-[310px] h-fit rounded-lg py-[30px] px-6 space-y-10"
-                  style={{ backgroundColor: testimonial.bg }}
-                  key={index}
-                >
-                  <p className="font-normal font-fragment text-lg/[135%] text-white ">
-                    {testimonial.text}
-                  </p>
-
-                  <div className="flex items-center gap-4">
-                    <div className="size-[50px] rounded-full overflow-hidden relative">
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        fill
-                      />
-                    </div>
-                    <div>
-                      <p className="text-xl/[90%] text-white">
-                        {testimonial.name}
-                      </p>
-                      <p className="text-white/70 text-sm/[135%]">
-                        {testimonial.company}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+          {/* Desktop: Vertical marquee columns */}
+          <div className="hidden lg:flex h-full gap-5">
+            {/* First Column - Moving Up */}
+            <div className="h-full">
+              <Marquee
+                direction="up"
+                speed={20}
+                pauseOnHover={true}
+                style={{ height: "310px" }}
+              >
+                {testimonials.map((testimonial, index) => (
+                  <Card
+                    testimonial={testimonial}
+                    index={index}
+                    key={`col1-${index}`}
+                  />
+                ))}
+              </Marquee>
             </div>
-            <div className="flex flex-col gap-5">
-              {testimonials.slice(3, 6).map((testimonial, index) => (
-                <div
-                  className="w-[310px] h-fit rounded-lg py-[30px] px-6 space-y-10"
-                  style={{ backgroundColor: testimonial.bg }}
-                  key={index}
-                >
-                  <p className="font-normal font-fragment text-lg/[135%] text-white ">
-                    {testimonial.text}
-                  </p>
 
-                  <div className="flex items-center gap-4">
-                    <div className="size-[50px] rounded-full overflow-hidden relative">
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        fill
-                      />
-                    </div>
-                    <div>
-                      <p className="text-xl/[90%] text-white">
-                        {testimonial.name}
-                      </p>
-                      <p className="text-white/70 text-sm/[135%]">
-                        {testimonial.company}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+            {/* Second Column - Moving Down */}
+            <div className="h-full">
+              {testimonials.map((testimonial, index) => (
+                <Card
+                  testimonial={testimonial}
+                  index={index}
+                  key={`col1-${index}`}
+                />
               ))}
             </div>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function Card({
+  testimonial,
+  index,
+}: {
+  testimonial: (typeof testimonials)[number];
+  index: number;
+}) {
+  return (
+    <div
+      className="w-[300px] h-[250px] sm:w-[310px] sm:h-[300px] rounded-lg py-6 sm:py-8 px-5 sm:px-6 flex flex-col justify-between mx-2 sm:mx-3 flex-shrink-0"
+      style={{ backgroundColor: testimonial.bg }}
+      key={index}
+    >
+      <p className="font-normal font-fragment text-base sm:text-lg leading-[135%] text-white">
+        {testimonial.text}
+      </p>
+
+      <div className="flex items-center gap-3 sm:gap-4">
+        <div className="size-[40px] sm:size-[50px] rounded-full overflow-hidden relative">
+          <Image src={testimonial.image} alt={testimonial.name} fill />
+        </div>
+        <div>
+          <p className="text-lg sm:text-xl leading-[90%] text-white">
+            {testimonial.name}
+          </p>
+          <p className="text-white/70 text-sm leading-[135%]">
+            {testimonial.company}
+          </p>
+        </div>
+      </div>
+    </div>
   );
 }
 
