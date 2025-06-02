@@ -53,7 +53,7 @@ export function Footer() {
             <div className="space-y-5 w-[205px]">
               <header className="font-semibold text-lg">Product</header>
 
-              <div className="space-y-2.5 font-fragment text-base opacity-70 *:block">
+              <div className="space-y-2.5 font-fragment text-base text-white/70 *:hover:text-white *:block">
                 <Link href={"/"}>Features</Link>
                 <Link href={"/"}>Integrations</Link>
                 <Link href={"/"}>Pricing</Link>
@@ -64,7 +64,7 @@ export function Footer() {
             <div className="space-y-5 w-[205px]">
               <header className="font-semibold text-lg">Company</header>
 
-              <div className="space-y-2.5 font-fragment text-base opacity-70 *:block">
+              <div className="space-y-2.5 font-fragment text-base text-white/70 *:hover:text-white *:block">
                 <Link href={"/"}>About</Link>
                 <Link href={"/"}>Blog</Link>
               </div>
@@ -72,7 +72,7 @@ export function Footer() {
             <div className="space-y-5">
               <header className="font-semibold text-lg">Resources</header>
 
-              <div className="space-y-2.5 font-fragment text-base opacity-70 *:block">
+              <div className="space-y-2.5 font-fragment text-base text-white/70 *:hover:text-white *:block">
                 <Link href={"/"}>Brand Kit</Link>
                 <Link href={"/"}>Careers</Link>
               </div>

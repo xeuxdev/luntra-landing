@@ -118,7 +118,8 @@ export function TestimonialSection() {
                 />
               ))}
             </Marquee>
-          </div>{" "}
+          </div>
+
           {/* Desktop: Vertical marquee columns */}
           <div className="hidden lg:flex h-full gap-5">
             {/* First Column - Moving Up */}
