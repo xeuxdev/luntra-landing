@@ -27,7 +27,7 @@ export default function Navbar() {
               />
             </svg>
 
-            <nav className="md:flex hidden items-center gap-[30px] text-sm font-medium text-[#ffffff] font-author ">
+            <nav className="md:flex hidden items-center gap-[30px] text-sm font-medium text-white/90 **:hover:text-white ">
               <Link href="/">Build</Link>
               <Link href="/">Explore</Link>
               <Link href="/">Ecosystem</Link>
@@ -43,7 +43,7 @@ export default function Navbar() {
               {isMenuOpen ? <IoClose /> : <HiMenuAlt4 />}
             </button>
 
-            <button className="px-5 h-10 rounded-[32px] text-base text-black  bg-white">
+            <button className="px-5 h-10 rounded-[32px] text-base text-black  bg-white hover:bg-white/90 font-semibold">
               Connect
             </button>
           </div>

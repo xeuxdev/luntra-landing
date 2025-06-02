@@ -159,11 +159,14 @@ export function Footer() {
         {/* Copyright and social links - responsive for all screen sizes */}
         <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-0 sm:justify-between">
           <p className="font-fragment text-sm/[155%] opacity-70 text-center sm:text-left">
-            &copy; Copyright 2024. All rights reserved.
+            &copy; Copyright {new Date().getFullYear()}. All rights reserved.
           </p>
 
           <div className="flex items-center gap-2.5">
-            <div className="size-[50px] bg-[#1E0303] rounded-full grid place-items-center">
+            <Link
+              href=""
+              className="size-[50px] bg-[#1E0303] rounded-full grid place-items-center"
+            >
               <svg
                 width="20"
                 height="20"
@@ -176,8 +179,11 @@ export function Footer() {
                   fill="#FF2422"
                 />
               </svg>
-            </div>
-            <div className="size-[50px] bg-[#1E0303] rounded-full grid place-items-center">
+            </Link>
+            <Link
+              href=""
+              className="size-[50px] bg-[#1E0303] rounded-full grid place-items-center"
+            >
               <svg
                 width="20"
                 height="20"
@@ -190,8 +196,11 @@ export function Footer() {
                   fill="#FF2422"
                 />
               </svg>
-            </div>
-            <div className="size-[50px] bg-[#1E0303] rounded-full grid place-items-center">
+            </Link>
+            <Link
+              href=""
+              className="size-[50px] bg-[#1E0303] rounded-full grid place-items-center"
+            >
               <svg
                 width="20"
                 height="20"
@@ -204,7 +213,7 @@ export function Footer() {
                   fill="#FF2422"
                 />
               </svg>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

@@ -66,3 +66,30 @@ button {
   border: 1px solid #631a1a;
   /* border-image-source: linear-gradient(180deg, #631a1a 49.92%, #340001 100%); */
 }
+
+/* Testimonial Marquee Animations */
+@keyframes marquee-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marquee-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-marquee-up {
+  animation: marquee-up 30s linear infinite;
+}
+
+.animate-marquee-down {
+  animation: marquee-down 30s linear infinite;
+}

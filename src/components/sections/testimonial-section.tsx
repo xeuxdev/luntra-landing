@@ -118,37 +118,41 @@ export function TestimonialSection() {
                 />
               ))}
             </Marquee>
-          </div>
-
+          </div>{" "}
           {/* Desktop: Vertical marquee columns */}
           <div className="hidden lg:flex h-full gap-5">
             {/* First Column - Moving Up */}
-            <div className="h-full">
-              <Marquee
-                direction="up"
-                speed={20}
-                pauseOnHover={true}
-                style={{ height: "310px" }}
-              >
-                {testimonials.map((testimonial, index) => (
+            <div className="flex-1 h-full overflow-hidden">
+              <div className="animate-marquee-up space-y-5">
+                {[
+                  ...testimonials.slice(0, 3),
+                  ...testimonials.slice(0, 3),
+                  ...testimonials.slice(0, 3),
+                ].map((testimonial, index) => (
                   <Card
                     testimonial={testimonial}
                     index={index}
                     key={`col1-${index}`}
                   />
                 ))}
-              </Marquee>
+              </div>
             </div>
 
             {/* Second Column - Moving Down */}
-            <div className="h-full">
-              {testimonials.map((testimonial, index) => (
-                <Card
-                  testimonial={testimonial}
-                  index={index}
-                  key={`col1-${index}`}
-                />
-              ))}
+            <div className="flex-1 h-full overflow-hidden">
+              <div className="animate-marquee-down space-y-5">
+                {[
+                  ...testimonials.slice(3, 6),
+                  ...testimonials.slice(3, 6),
+                  ...testimonials.slice(3, 6),
+                ].map((testimonial, index) => (
+                  <Card
+                    testimonial={testimonial}
+                    index={index}
+                    key={`col2-${index}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
