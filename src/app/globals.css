@@ -42,7 +42,7 @@ button {
 }
 
 .btn.primary:hover {
-  background: #e16b55;
+  opacity: 0.9;
 }
 
 .btn.secondary {

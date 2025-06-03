@@ -3,7 +3,7 @@ import React from "react";
 
 export function PhasesSection() {
   return (
-    <section className="py-20 px-5 lg:h-[1092px] max-w-[1300px] mx-auto">
+    <section className="py-20 px-5 lg:h-[1092px] max-w-[1300px] w-full mx-auto">
       <div className="size-full relative space-y-14">
         <h4 className="text-3xl sm:text-4xl md:text-6xl lg:text-[82px]/[90%] text-center max-w-full sm:max-w-[650px] md:max-w-[750px] mx-auto font-medium">
           Upcoming Phases
@@ -109,14 +109,14 @@ export function PhasesSection() {
             <Image src={"/phases-2.png"} alt="Upcoming Phases" fill />
           </div>
 
-          <div className="absolute left-10 top-14 max-w-[337px] space-y-[30px]">
+          <div className="absolute left-0 top-14 max-w-[337px] space-y-[30px]">
             <div className="space-y-2.5 text-right">
               <p className="text-sm/[135%] font-fragment text-white/70">
                 Phase 1
               </p>
               <p className="text-[33px]/[90%] font-medium">Conceptualization</p>
             </div>
-            <div className="flex justify-end items-center flex-wrap gap-2.5">
+            <div className="flex justify-end items-center flex-wrap gap-2.5 *:backdrop-blur-2xl">
               <div className="py-[11px] px-[15px] bg-[#F71C19]/12 h-11 inline-flex items-center w-fit text-base/[135%] text-[#F0342B] -tracking-[4%] font-normal font-fragment">
                 Research
               </div>
@@ -142,7 +142,7 @@ export function PhasesSection() {
               </p>
               <p className="text-[33px]/[90%] font-medium">Development</p>
             </div>
-            <div className="flex items-center flex-wrap gap-2.5">
+            <div className="flex items-center flex-wrap gap-2.5 *:backdrop-blur-2xl">
               <div className="py-[11px] px-[15px] bg-[#F71C19]/12 h-11 inline-flex items-center w-fit text-base/[135%] text-[#F0342B] -tracking-[4%] font-normal font-fragment">
                 Blockchain
               </div>
@@ -161,14 +161,14 @@ export function PhasesSection() {
             </div>
           </div>
 
-          <div className="absolute left-32 bottom-48 max-w-[337px] space-y-[30px]">
+          <div className="absolute left-20 bottom-54 max-w-[337px] space-y-[30px]">
             <div className="space-y-2.5 text-right">
               <p className="text-sm/[135%] font-fragment text-white/70">
                 Phase 3
               </p>
               <p className="text-[33px]/[90%] font-medium">Launch</p>
             </div>
-            <div className="flex justify-end items-center flex-wrap gap-2.5">
+            <div className="flex justify-end items-center flex-wrap gap-2.5 *:backdrop-blur-2xl">
               <div className="py-[11px] px-[15px] bg-[#F71C19]/12 h-11 inline-flex items-center w-fit text-base/[135%] text-[#F0342B] -tracking-[4%] font-normal font-fragment">
                 Token Sale
               </div>

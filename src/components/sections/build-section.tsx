@@ -1,20 +1,21 @@
-import Image from "next/image";
-import React from "react";
-
 export function WhatYouCanBuildSection() {
   return (
     <section
       id="build"
-      className="py-[50px] px-5 lg:px-0 lg:pr-[100px] relative "
+      className="py-[50px] px-5 lg:px-0 lg:pr-[100px] relative max-w-[1330px] mx-auto "
     >
       <div className="size-full flex lg:max-h-[900px] overflow-hidden">
-        {/* left */}
-
-        <div className="absolute w-[890px] h-[890px] -left-[100px] -top-32 ">
-          <Image src={"/build.png"} alt="What you can build" fill />
+        <div className="absolute w-[1033px] h-[1000px] -left-[83px] -top-32 ">
+          <video
+            src="/build.mp4"
+            autoPlay
+            loop
+            muted
+            className="w-full h-full object-cover"
+          />
         </div>
 
-        <div className="w-[478px] h-[318px] absolute right-[100px] bottom-0 bg-black/40" />
+        <div className="w-[478px] h-[318px] absolute right-[100px] bottom-0 bg-black/40 z-20" />
 
         {/* right */}
         <div className="ml-auto max-w-[478px] relative ">

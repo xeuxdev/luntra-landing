@@ -1,11 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export function InfoSection() {
-  const [typedChars, setTypedChars] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 0.8", "end 0.2"],
+  });
 
   const firstText = "Glide helps developers automate blockchain security and ";
   const spanText = "optimization so they can focus on building great dApps.";
@@ -14,43 +17,41 @@ export function InfoSection() {
 
   const fullText = firstText + spanText + " " + secondText;
 
-  const handleInView = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setTypedChars(0);
-
-    let currentChar = 0;
-    const interval = setInterval(() => {
-      if (currentChar <= fullText.length) {
-        setTypedChars(currentChar);
-        currentChar++;
-      } else {
-        clearInterval(interval);
-        setIsAnimating(false);
-      }
-    }, 10); // 40ms per character
-  };
+  const typedChars = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, fullText.length]
+  );
 
   const getCharColor = (index: number) => {
-    return index < typedChars ? "text-white" : "text-white/30";
+    return scrollYProgress.get() * fullText.length > index
+      ? "text-white"
+      : "text-white/30";
   };
-
   return (
-    <section id="info" className="py-[140px] px-5">
+    <section ref={sectionRef} id="info" className="py-[140px] px-5">
       <motion.div
         className="max-w-[727px] mx-auto w-full text-2xl md:text-[44px] leading-[114%] -tracking-[2%] space-y-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        onViewportEnter={handleInView}
         viewport={{ once: true, margin: "-100px" }}
       >
         <p className="font-medium">
           {firstText.split("").map((char, index) => (
             <motion.span
               key={index}
-              className={`transition-colors duration-200 ${getCharColor(
-                index
-              )}`}
+              className={`transition-colors duration-75 ${
+                scrollYProgress.get() * fullText.length > index
+                  ? "text-white"
+                  : "text-white/30"
+              }`}
+              style={{
+                color: useTransform(
+                  scrollYProgress,
+                  [index / fullText.length, (index + 1) / fullText.length],
+                  ["rgba(255,255,255,0.3)", "rgba(255,255,255,1)"]
+                ),
+              }}
             >
               {char}
             </motion.span>
@@ -59,9 +60,16 @@ export function InfoSection() {
             {spanText.split("").map((char, index) => (
               <motion.span
                 key={index + firstText.length}
-                className={`transition-colors duration-200 ${getCharColor(
-                  index + firstText.length
-                )}`}
+                style={{
+                  color: useTransform(
+                    scrollYProgress,
+                    [
+                      (index + firstText.length) / fullText.length,
+                      (index + firstText.length + 1) / fullText.length,
+                    ],
+                    ["rgba(255,255,255,0.3)", "rgba(255,255,255,1)"]
+                  ),
+                }}
               >
                 {char}
               </motion.span>
@@ -73,9 +81,18 @@ export function InfoSection() {
           {secondText.split("").map((char, index) => (
             <motion.span
               key={index + firstText.length + spanText.length + 1}
-              className={`transition-colors duration-200 ${getCharColor(
-                index + firstText.length + spanText.length + 1
-              )}`}
+              style={{
+                color: useTransform(
+                  scrollYProgress,
+                  [
+                    (index + firstText.length + spanText.length + 1) /
+                      fullText.length,
+                    (index + firstText.length + spanText.length + 2) /
+                      fullText.length,
+                  ],
+                  ["rgba(255,255,255,0.3)", "rgba(255,255,255,1)"]
+                ),
+              }}
             >
               {char}
             </motion.span>

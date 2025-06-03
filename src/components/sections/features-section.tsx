@@ -9,7 +9,7 @@ export function FeaturesSection() {
   return (
     <section className="py-12 sm:py-16 md:py-20 lg:py-[100px] px-4 sm:px-5 space-y-10 sm:space-y-[40px] md:space-y-[60px] min-[1440px]:px-20 max-w-[1280px] mx-auto">
       <motion.div
-        className="space-y-6 sm:space-y-10"
+        className="space-y-6 sm:space-y-10 text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -20,6 +20,13 @@ export function FeaturesSection() {
           <span className="text-[#FC0609]">build faster</span> with less
           complexity
         </h2>
+
+        <button
+          className="btn primary mx-auto"
+          style={{ width: "220px", height: "70px" }}
+        >
+          Learn More
+        </button>
       </motion.div>
 
       {/* bento grids */}
@@ -27,25 +34,25 @@ export function FeaturesSection() {
         <div className="w-full lg:flex-[65%] h-full gap-5 flex flex-col">
           <div className="flex flex-col md:flex-row gap-5">
             <motion.div
-              className="card-border overflow-hidden bg-black w-full min-w-0 md:min-w-[350px] lg:min-w-[460px] rounded-md py-8 md:py-12 px-5 md:px-7 flex flex-col"
+              className="card-border overflow-hidden w-full md:min-w-[350px] lg:min-w-[460px] lg:h-[641px] rounded-md pb-8 md:pb-[50px] px-5 md:px-7 flex flex-col justify-center relative"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -5 }}
             >
-              <Image
-                src={"/features/ai-transaction.png"}
-                alt="AI Transaction Guardian"
-                className="w-full"
-                width={504}
-                height={504}
-              />
-              <div className="space-y-4 text-center">
+              <div className="relative aspect-square lg:absolute lg:size-[504px] lg:left-1/2 lg:-translate-x-1/2 -top-5">
+                <Image
+                  src={"/features/ai-transaction.png"}
+                  alt="AI Transaction Guardian"
+                  className="w-full"
+                  fill
+                />
+              </div>
+              <div className="space-y-4 text-center mt-auto">
                 <header className="text-3xl md:text-4xl leading-[90%]">
                   AI Transaction Guardian
                 </header>
-                <p className="text-sm md:text-base font-fragment text-white/70">
+                <p className="text-sm md:text-base/[135%] font-fragment text-white/70">
                   Our chain uses OpenAI models to detect MEV patterns,
                   reordering transactions to protect users from sandwich
                   attacks.
@@ -59,7 +66,6 @@ export function FeaturesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
               >
                 <Icons.fingerPrint className="mx-auto" />
 
@@ -79,7 +85,6 @@ export function FeaturesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
               >
                 <Image
                   src={"/features/selective-privacy.png"}
@@ -100,26 +105,25 @@ export function FeaturesSection() {
             </div>
           </div>
           <motion.div
-            className="card-border overflow-hidden bg-black w-full rounded-md p-6 md:p-[50px] flex flex-col md:flex-row-reverse items-center lg:h-[350px]"
+            className="card-border overflow-hidden bg-black w-full rounded-md p-6 md:p-[50px] flex flex-col md:flex-row-reverse items-center lg:h-[350px] relative gap-10 lg:max-w-[800px]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            whileHover={{ y: -5 }}
           >
-            <div className="w-full h-[200px] md:size-full relative">
+            <div className="w-full h-[200px] md:size-[323px] lg:size-[479px] relative lg:absolute lg:-right-20 xl:-right-10 lg:top-1/2 lg:-translate-y-1/2 shrink-0 z-10">
               <Image
                 src={"/features/smart-gas.png"}
                 alt="Smart Gas Wizard"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </div>
-            <div className="space-y-4 text-center w-full md:min-w-[336px] md:max-w-[380px] mt-4 md:mt-0">
-              <header className="text-3xl md:text-4xl leading-[90%]">
+            <div className="space-y-4 text-center w-full md:max-w-[336px] mt-4 md:mt-0 lg:mr-auto z-20">
+              <header className="text-3xl md:text-4xl/[90%]">
                 Smart Gas Wizard
               </header>
-              <p className="text-sm md:text-base font-fragment text-white/70">
+              <p className="text-sm/[135%] font-fragment text-white/70">
                 Our AI gas prediction system analyzes network conditions,
                 recommending optimal gas prices to save users 18% on costs
                 without sacrificing speed.
@@ -135,7 +139,6 @@ export function FeaturesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
-            whileHover={{ y: -5 }}
           >
             <div className="absolute -top-[280px] size-[548px] -z-10 -right-[320px] rotate-5 hidden sm:block">
               <Image src={"/features/smart-gas.png"} alt="" fill />
@@ -159,7 +162,6 @@ export function FeaturesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: true }}
-            whileHover={{ y: -5 }}
           >
             <div className="space-y-4 text-center">
               <header className="text-3xl md:text-4xl leading-[90%]">

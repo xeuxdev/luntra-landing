@@ -51,19 +51,9 @@ export function TestimonialSection() {
           </div>
 
           {/* Desktop: Vertical marquee columns */}
-          <div className="hidden lg:flex h-full relative gap-5">
-            <div className="absolute -top-5 left-0 right-0 h-40 bg-gradient-to-b from-black via-black/80 to-transparent opacity-90 z-20"></div>
-            <div className="absolute -bottom-5 left-0 right-0 h-40 bg-gradient-to-t from-black via-black/80 to-transparent opacity-90 z-20"></div>
-            <div
-              className="absolute inset-0 "
-              style={{
-                background:
-                  "radial-gradient(ellipse 120% 80% at center, transparent 40%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0.8) 100%)",
-              }}
-            ></div>
-
+          <div className="hidden lg:flex h-full max-h-[835px] relative gap-5 w-full overflow-hidden">
             <div className="h-full overflow-hidden">
-              <div className="animate-marquee-up space-y-5">
+              <div className="animate-marquee-up flex flex-col gap-5">
                 {[
                   ...testimonials.slice(0, 3),
                   ...testimonials.slice(0, 3),
@@ -79,7 +69,7 @@ export function TestimonialSection() {
             </div>
 
             <div className="h-full overflow-hidden">
-              <div className="animate-marquee-down space-y-5">
+              <div className="animate-marquee-down flex flex-col gap-5">
                 {[
                   ...testimonials.slice(3, 6),
                   ...testimonials.slice(3, 6),
@@ -109,7 +99,7 @@ function Card({
 }) {
   return (
     <div
-      className="w-[300px] h-[250px] sm:w-[310px] sm:h-[300px] rounded-lg py-6 sm:py-8 px-5 sm:px-6 flex flex-col justify-between mx-2 sm:mx-3 flex-shrink-0"
+      className="w-[300px] h-fit min-h-[250px] sm:w-[310px] rounded-lg py-6 sm:py-[30px] px-5 sm:px-[25px] flex flex-col justify-between gap-10"
       style={{ backgroundColor: testimonial.bg }}
       key={index}
     >
@@ -118,7 +108,7 @@ function Card({
       </p>
 
       <div className="flex items-center gap-3 sm:gap-4">
-        <div className="size-[40px] sm:size-[50px] rounded-full overflow-hidden relative">
+        <div className="size-[40px] sm:size-[50px] rounded-full overflow-hidden relative shrink-0">
           <Image src={testimonial.image} alt={testimonial.name} fill />
         </div>
         <div>
