@@ -4,95 +4,25 @@ import Marquee from "react-fast-marquee";
 
 export function TestimonialSection() {
   return (
-    <section className="h-auto py-12 sm:py-16 md:py-20 lg:h-[880px] lg:py-0 overflow-hidden w-fit mx-auto">
-      <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 md:gap-16 lg:gap-20 h-full px-4 sm:px-6 lg:px-0">
-        {/* Mobile/Tablet Header Section */}
-        <div className="lg:hidden text-center space-y-6 sm:space-y-8 py-8 sm:py-12">
+    <section className="h-auto px-5 lg:px-10 py-12 sm:py-16 md:py-20 lg:h-[880px] lg:py-0 overflow-hidden w-fit mx-auto">
+      <div className="flex flex-col items-center justify-center lg:flex-row gap-8 sm:gap-12 md:gap-16 lg:gap-[90px] h-full px-4 sm:px-6 lg:px-0 relative">
+        <div className="max-w-[510px] max-md:text-center space-y-10">
           <div className="space-y-4">
             <p className="text-white/70 text-base sm:text-lg font-fragment font-normal -tracking-[4%]">
               Real World Examples
             </p>
-            <p className="text-3xl sm:text-4xl md:text-5xl text-white">
+            <p className="text-3xl sm:text-4xl md:text-5xl lg:text-[82px] text-white">
               Trusted by the community
             </p>
+            <p className="text-3xl sm:text-4xl md:text-6xl lg:text-[82px]/[90%] font-medium"></p>
           </div>
-          <button className="btn primary">Read docs</button>
-        </div>
-
-        {/* Desktop Left Section - preserved original styling */}
-        <div className="hidden lg:flex h-full flex-col gap-[147px] relative">
-          <svg
-            width="613"
-            height="402"
-            viewBox="0 0 613 402"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="-rotate-3 -ml-5"
-          >
-            <path
-              d="M-85.7442 345.418C-9.30884 374.572 157.095 385.753 211.229 197.239C265.364 8.72524 497.609 -9.41757 606.965 5.07527"
-              stroke="url(#paint0_linear_46_114)"
-              strokeWidth="80"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_46_114"
-                x1="349.5"
-                y1="135.499"
-                x2="140.081"
-                y2="350.513"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#D84328" stopOpacity="0" />
-                <stop offset="1" stopColor="#D84328" />
-              </linearGradient>
-            </defs>
-          </svg>
-          <svg
-            width="613"
-            height="402"
-            viewBox="0 0 613 402"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="rotate-3 -ml-5"
-          >
-            <path
-              d="M-85.7442 56.66572-9.30884 27.5141 157.095 16.3334 211.229 204.847C265.364 393.361 497.609 411.504 606.965 397.011"
-              stroke="url(#paint0_linear_46_115)"
-              strokeWidth="80"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_46_115"
-                x1="349.5"
-                y1="266.587"
-                x2="140.081"
-                y2="51.5739"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#D84328" stopOpacity="0" />
-                <stop offset="1" stopColor="#D84328" />
-              </linearGradient>
-            </defs>
-          </svg>
-
-          <div className="absolute flex items-center justify-center flex-col gap-[30px] top-1/2 -translate-y-1/2 -right-14 w-fit max-w-[520px]">
-            <div className="space-y-4 text-center">
-              <p className="text-white/70 text-lg font-fragment font-normal -tracking-[4%]">
-                Real World Examples
-              </p>
-              <p className="text-4xl lg:text-[64px]/[90%] text-white">
-                Trusted by the community
-              </p>
-            </div>
-            <button className="btn primary">Read docs</button>
-          </div>
+          <button className="btn primary">Follow us on X</button>
         </div>
 
         {/* Testimonials Section */}
         <div className="relative h-full w-full">
           {/* Mobile/Tablet: Horizontal marquee */}
-          <div className="lg:hidden space-y-5">
+          <div className="lg:hidden space-y-5 relative">
             <Marquee gradient={false} speed={30} pauseOnHover={true} loop={0}>
               {testimonials.map((testimonial, index) => (
                 <Card
@@ -121,9 +51,18 @@ export function TestimonialSection() {
           </div>
 
           {/* Desktop: Vertical marquee columns */}
-          <div className="hidden lg:flex h-full gap-5">
-            {/* First Column - Moving Up */}
-            <div className="flex-1 h-full overflow-hidden">
+          <div className="hidden lg:flex h-full relative gap-5">
+            <div className="absolute -top-5 left-0 right-0 h-40 bg-gradient-to-b from-black via-black/80 to-transparent opacity-90 z-20"></div>
+            <div className="absolute -bottom-5 left-0 right-0 h-40 bg-gradient-to-t from-black via-black/80 to-transparent opacity-90 z-20"></div>
+            <div
+              className="absolute inset-0 "
+              style={{
+                background:
+                  "radial-gradient(ellipse 120% 80% at center, transparent 40%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0.8) 100%)",
+              }}
+            ></div>
+
+            <div className="h-full overflow-hidden">
               <div className="animate-marquee-up space-y-5">
                 {[
                   ...testimonials.slice(0, 3),
@@ -139,8 +78,7 @@ export function TestimonialSection() {
               </div>
             </div>
 
-            {/* Second Column - Moving Down */}
-            <div className="flex-1 h-full overflow-hidden">
+            <div className="h-full overflow-hidden">
               <div className="animate-marquee-down space-y-5">
                 {[
                   ...testimonials.slice(3, 6),

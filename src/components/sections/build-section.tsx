@@ -5,7 +5,7 @@ export function WhatYouCanBuildSection() {
   return (
     <section
       id="build"
-      className="py-[50px] px-5 lg:px-0 lg:pr-[100px] relative max-w-[1280px] mx-auto space-y-10 sm:space-y-[40px] md:space-y-[60px] lg:space-y-[100px] lg:pt-[100px] lg:pb-[150px] lg:min-h-[900px] overflow-hidden"
+      className="py-[50px] px-5 lg:px-0 lg:pr-[100px] relative "
     >
       <div className="size-full flex lg:max-h-[900px] overflow-hidden">
         {/* left */}
