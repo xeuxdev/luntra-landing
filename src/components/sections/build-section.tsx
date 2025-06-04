@@ -4,7 +4,7 @@ export function WhatYouCanBuildSection() {
       <div className="lg:flex lg:min-h-[200vh]">
         {/* Left side - sticky video */}
 
-        <div className="max-lg:aspect-square lg:w-[1033px] lg:h-[1000px] lg:sticky lg:-left-20 lg:-top-14 lg:overflow-hidden relative">
+        <div className="max-lg:aspect-square lg:w-[1033px] lg:h-[1000px] lg:sticky lg:-left-20 lg:-top-14  relative">
           <div className="lg:absolute lg:inset-0 size-full ">
             <video
               src="/build.mp4"
@@ -17,7 +17,6 @@ export function WhatYouCanBuildSection() {
           <div className="absolute inset-0 bg-black/20 z-10" />
         </div>
 
-        {/* Right side - scrollable content */}
         <div className="lg:w-1/2 relative py-[50px] px-5 lg:px-[50px] lg:py-[100px]">
           <div className="space-y-[60px] min-h-screen flex flex-col justify-center">
             <header className="text-3xl sm:text-4xl md:text-6xl lg:text-[82px] lg:leading-[90%] max-lg:text-center max-w-full sm:max-w-[650px] md:max-w-[750px] mx-auto font-medium">

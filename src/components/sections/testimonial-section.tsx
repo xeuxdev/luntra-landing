@@ -4,9 +4,9 @@ import Marquee from "react-fast-marquee";
 
 export function TestimonialSection() {
   return (
-    <section className="w-full h-auto px-1 sm:px-4 lg:px-10 py-12 sm:py-16 md:py-20 lg:h-[880px] lg:py-0 overflow-hidden">
+    <section className="w-full h-auto px-1 sm:px-4 lg:px-10 lg:pl-[120px] py-12 sm:py-16 md:py-20 lg:h-[880px] lg:py-0 overflow-hidden">
       <div className="max-w-[1330px] mx-auto">
-        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 md:gap-16 lg:gap-[90px] h-full">
+        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 md:gap-16 lg:gap-[90px] h-full lg:justify-between">
           <div className="w-full lg:max-w-[510px] text-center lg:text-left space-y-6 lg:space-y-10">
             <div className="space-y-4">
               <p className="text-white/70 text-base sm:text-lg font-fragment font-normal -tracking-[4%]">
@@ -20,7 +20,7 @@ export function TestimonialSection() {
           </div>
 
           {/* Testimonials Section */}
-          <div className="flex-1 lg:relative lg:h-full w-full">
+          <div className=" lg:relative lg:h-full w-fit">
             {/* Mobile/Tablet: Horizontal marquee */}
             <div className="lg:hidden space-y-5 w-full">
               <Marquee
@@ -53,7 +53,7 @@ export function TestimonialSection() {
             </div>
 
             {/* Desktop: Vertical marquee columns */}
-            <div className="hidden lg:flex h-full max-h-[835px] relative gap-5 w-full overflow-hidden">
+            <div className="hidden lg:flex h-full max-h-[835px] relative gap-5 w-full overflow-hidden vignette-overlay">
               <div className="h-full overflow-hidden">
                 <div className="animate-marquee-up flex flex-col gap-5">
                   {[
