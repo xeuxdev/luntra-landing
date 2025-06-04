@@ -24,12 +24,14 @@ export function Footer() {
                   />
                 </svg>
 
-                <span className="text-[27px]/[36px] font-bold">Glide</span>
+                <span className="text-[27px]/[36px] font-bold">
+                  Luntra Infrastructure
+                </span>
               </div>
               <p className="font-fragment text-sm/[155%] opacity-50">
-                Build amazing faster dapps like never before using Glide with
-                the seamless integrated AI helping tracking transactions and
-                giving control to you.
+                Build amazing faster dapps like never before using Luntra
+                Infrastructure with the seamless integrated AI helping tracking
+                transactions and giving control to you.
               </p>
             </div>
             <button className="btn primary">
@@ -99,12 +101,14 @@ export function Footer() {
                 />
               </svg>
 
-              <span className="text-[27px]/[36px] font-bold">Glide</span>
+              <span className="text-[27px]/[36px] font-bold">
+                Luntra Infrastructure
+              </span>
             </div>
             <p className="font-fragment text-sm/[155%] opacity-50 text-center sm:text-left">
-              Build amazing faster dapps like never before using Glide with the
-              seamless integrated AI helping tracking transactions and giving
-              control to you.
+              Build amazing faster dapps like never before using Luntra
+              Infrastructure with the seamless integrated AI helping tracking
+              transactions and giving control to you.
             </p>
           </div>
 

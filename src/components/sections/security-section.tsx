@@ -168,8 +168,8 @@ export function SecuritySection() {
               viewport={{ once: true }}
             >
               <span>
-                Glide = parallel + state minimized + native account abstraction
-                + native assets
+                Luntra Infrastructure = parallel + state minimized + native
+                account abstraction + native assets
               </span>
             </motion.div>
           </div>

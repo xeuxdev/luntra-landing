@@ -29,7 +29,8 @@ export function InfoSection() {
     offset: ["start 0.8", "end 0.2"],
   });
 
-  const firstText = "Glide helps developers automate blockchain security and ";
+  const firstText =
+    "Luntra Infrastructure helps developers automate blockchain security and ";
   const spanText = "optimization so they can focus on building great dApps.";
   const secondText =
     "Developers can use our suite of AI-powered tools to optimize, secure, and deploy their applications without sacrificing performance or user experience.";

@@ -8,13 +8,14 @@ export function CTASection() {
         <div className="w-full max-w-[638px] mx-auto gap-10 flex flex-col items-center">
           <div className="space-y-5 text-center">
             <h5 className="text-3xl sm:text-4xl md:text-6xl lg:text-[82px]/[90%] text-center max-w-full sm:max-w-[650px] md:max-w-[750px] mx-auto font-medium">
-              Get <span className="text-[#FB0E0F]">Started</span> with Glide{" "}
-              <span className="text-[#FB0E0F]">today</span> in just 10 seconds
+              Get <span className="text-[#FB0E0F]">Started</span> with Luntra
+              Infrastructure <span className="text-[#FB0E0F]">today</span> in
+              just 10 seconds
             </h5>
             <p className="text-base/[155%] font-normal font-fragment opacity-70">
-              Glide integrates with a wide range of blockchain frameworks and
-              development tools, making it easy to fit into your existing dApp
-              workflows and infrastructure.
+              Luntra Infrastructure integrates with a wide range of blockchain
+              frameworks and development tools, making it easy to fit into your
+              existing dApp workflows and infrastructure.
             </p>
           </div>
 
