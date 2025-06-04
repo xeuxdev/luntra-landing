@@ -144,7 +144,7 @@ export function FeaturesSection() {
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="absolute -top-[280px] size-[548px] -z-10 -right-[320px] rotate-5 hidden sm:block">
+            <div className="absolute lg:-top-[280px] size-[300px] -top-40 -right-40 lg:size-[548px] sm:-top-32 sm:-right-32 -z-10 lg:-right-[320px] rotate-5">
               <video
                 src="/features/implementation-process.mp4"
                 className="size-full object-cover"
@@ -154,7 +154,7 @@ export function FeaturesSection() {
                 playsInline
               ></video>
             </div>
-            <div className="absolute -bottom-[280px] size-[548px] -z-10 -left-[350px] -rotate-87 hidden sm:block">
+            <div className="absolute lg:-bottom-[280px] size-[300px] -bottom-40 -left-40 sm:-left-32 sm:-bottom-32 lg:size-[548px] -z-10 lg:-left-[350px] -rotate-87">
               <video
                 src="/features/implementation-process.mp4"
                 className="size-full object-cover"
