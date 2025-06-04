@@ -16,9 +16,7 @@ export default function Home() {
       <FeaturesSection />
       <SecuritySection />
       <WhatYouCanBuildSection />
-      <div className="overflow-x-hidden">
-        <TestimonialSection />
-      </div>
+      <TestimonialSection />
       <PhasesSection />
       <CTASection />
       <Footer />
