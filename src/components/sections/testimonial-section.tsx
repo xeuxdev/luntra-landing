@@ -112,7 +112,12 @@ function Card({
 
       <div className="flex items-center gap-3 sm:gap-4">
         <div className="size-[40px] sm:size-[50px] rounded-full overflow-hidden relative shrink-0">
-          <Image src={testimonial.image} alt={testimonial.name} fill />
+          <Image
+            src={testimonial.image}
+            alt={testimonial.name}
+            fill
+            className="object-cover"
+          />
         </div>
         <div>
           <p className="text-lg sm:text-xl leading-[90%] text-white">
