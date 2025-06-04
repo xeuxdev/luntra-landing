@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <div className="fixed top-[30px] left-0 right-0 z-50">
       <div className="w-full flex justify-center items-center">
-        <div className="md:w-auto w-full mx-5  md:h-[72px] h-[70px] px-5 py-[15px] bg-black rounded-[40px] flex gap-[60px] justify-between items-center">
+        <div className="md:w-auto w-full mx-5  md:h-[72px] h-[70px] px-5 py-[15px] bg-white/10 backdrop-blur-2xl rounded-[40px] flex gap-[60px] justify-between items-center">
           <div className="flex gap-5 items-center">
             <svg
               width="36"
@@ -36,15 +36,15 @@ export default function Navbar() {
             </nav>
           </div>
           <div className="flex items-center gap-3">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white text-[30px] md:hidden flex"
-            >
-              {isMenuOpen ? <IoClose /> : <HiMenuAlt4 />}
+            <button className="px-5 h-10 rounded-[32px] text-base text-white duration-300  bg-white/10 hover:bg-white/20 font-semibold">
+              Connect
             </button>
 
-            <button className="px-5 h-10 rounded-[32px] text-base text-black  bg-white hover:bg-white/90 font-semibold">
-              Connect
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-white text-[30px] md:hidden flex bg-white/10 hover:bg-white/20 rounded-md p-2 transition-colors duration-300 ease-in-out"
+            >
+              {isMenuOpen ? <IoClose /> : <HiMenuAlt4 />}
             </button>
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-[120px] left-0 right-0 mx-5 bg-black rounded-[40px] p-6 transition-all duration-300 ease-in-out transform ${
+        className={`md:hidden fixed top-[120px] left-0 right-0 mx-5 bg-white/20 backdrop-blur-2xl rounded-[40px] p-6 transition-all duration-300 ease-in-out transform ${
           isMenuOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-4 pointer-events-none"
