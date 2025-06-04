@@ -3,7 +3,7 @@ import React from "react";
 
 export function CTASection() {
   return (
-    <section className=" relative">
+    <section className="relative overflow-x-clip">
       <div className="lg:h-[727px] py-[150px] px-5 relative overflow-hidden">
         <div className="w-full max-w-[638px] mx-auto gap-10 flex flex-col items-center">
           <div className="space-y-5 text-center">

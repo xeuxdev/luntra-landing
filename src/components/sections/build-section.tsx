@@ -1,30 +1,30 @@
 export function WhatYouCanBuildSection() {
   return (
-    <section
-      id="build"
-      className="py-[50px] px-5 lg:px-0 lg:pr-[100px] relative max-w-[1330px] mx-auto "
-    >
-      <div className="size-full flex lg:max-h-[900px] overflow-hidden">
-        <div className="absolute w-[1033px] h-[1000px] -left-[83px] -top-32 ">
-          <video
-            src="/build.mp4"
-            autoPlay
-            loop
-            muted
-            className="w-full h-full object-cover"
-          />
+    <section id="build" className="relative max-w-[1330px] mx-auto">
+      <div className="lg:flex lg:min-h-[200vh]">
+        {/* Left side - sticky video */}
+
+        <div className="max-lg:aspect-square lg:w-[1033px] lg:h-[1000px] lg:sticky lg:-left-20 lg:-top-14 lg:overflow-hidden relative">
+          <div className="lg:absolute lg:inset-0 size-full ">
+            <video
+              src="/build.mp4"
+              autoPlay
+              loop
+              muted
+              className="size-full object-cover"
+            />
+          </div>
+          <div className="absolute inset-0 bg-black/20 z-10" />
         </div>
 
-        <div className="w-[478px] h-[318px] absolute right-[100px] bottom-0 bg-black/40 z-20" />
-
-        {/* right */}
-        <div className="ml-auto max-w-[478px] relative ">
-          <div className="space-y-[60px]">
-            <header className="text-[82px]/[90%] font-medium">
+        {/* Right side - scrollable content */}
+        <div className="lg:w-1/2 relative py-[50px] px-5 lg:px-[50px] lg:py-[100px]">
+          <div className="space-y-[60px] min-h-screen flex flex-col justify-center">
+            <header className="text-3xl sm:text-4xl md:text-6xl lg:text-[82px] lg:leading-[90%] max-lg:text-center max-w-full sm:max-w-[650px] md:max-w-[750px] mx-auto font-medium">
               What you can Build?
             </header>
 
-            <div className="space-y-20  ">
+            <div className="space-y-20">
               {items.map((item, index) => (
                 <Card
                   key={index}
@@ -51,15 +51,17 @@ function Card({
   description: string;
 }) {
   return (
-    <div className="space-y-[30px]">
+    <div className="space-y-4 md:space-y-5 lg:space-y-[30px]">
       <div className="space-y-5 font-medium">
-        <p className=" text-[27px]/[90%] text-[#f81817]">{tag}</p>
+        <p className="text-sm md:text-lg lg:text-[27px]/[90%] text-[#f81817]">
+          {tag}
+        </p>
         <p
-          className="text-[44px]/[90%]"
+          className="text-2xl md:text-[44px]/[90%]"
           dangerouslySetInnerHTML={{ __html: title }}
         />
       </div>
-      <p className="text-white/70 text-lg/[145%] font-fragment">
+      <p className="text-white/70 text-sm md:text-lg/[145%] font-fragment">
         {description}
       </p>
 

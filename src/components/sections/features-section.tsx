@@ -41,12 +41,14 @@ export function FeaturesSection() {
               viewport={{ once: true }}
             >
               <div className="relative aspect-square lg:absolute lg:size-[504px] lg:left-1/2 lg:-translate-x-1/2 -top-5">
-                <Image
-                  src={"/features/ai-transaction.png"}
-                  alt="AI Transaction Guardian"
-                  className="w-full"
-                  fill
-                />
+                <video
+                  src="/features/ai-transaction.mp4"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                ></video>
               </div>
               <div className="space-y-4 text-center mt-auto">
                 <header className="text-3xl md:text-4xl leading-[90%]">
@@ -112,12 +114,14 @@ export function FeaturesSection() {
             viewport={{ once: true }}
           >
             <div className="w-full h-[200px] md:size-[323px] lg:size-[479px] relative lg:absolute lg:-right-20 xl:-right-10 lg:top-1/2 lg:-translate-y-1/2 shrink-0 z-10">
-              <Image
-                src={"/features/smart-gas.png"}
-                alt="Smart Gas Wizard"
-                fill
-                className="object-contain"
-              />
+              <video
+                src="/features/smart-gas.mp4"
+                className="absolute inset-0 w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              ></video>
             </div>
             <div className="space-y-4 text-center w-full md:max-w-[336px] mt-4 md:mt-0 lg:mr-auto z-20">
               <header className="text-3xl md:text-4xl/[90%]">
@@ -141,10 +145,24 @@ export function FeaturesSection() {
             viewport={{ once: true }}
           >
             <div className="absolute -top-[280px] size-[548px] -z-10 -right-[320px] rotate-5 hidden sm:block">
-              <Image src={"/features/smart-gas.png"} alt="" fill />
+              <video
+                src="/features/implementation-process.mp4"
+                className="size-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              ></video>
             </div>
             <div className="absolute -bottom-[280px] size-[548px] -z-10 -left-[350px] -rotate-87 hidden sm:block">
-              <Image src={"/features/smart-gas.png"} alt="" fill />
+              <video
+                src="/features/implementation-process.mp4"
+                className="size-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              ></video>
             </div>
             <div className="space-y-2.5 text-center px-4 md:px-6">
               <header className="text-3xl md:text-4xl">
@@ -174,12 +192,14 @@ export function FeaturesSection() {
             </div>
 
             <div className="aspect-square relative">
-              <Image
-                src={"/features/contract-shield.png"}
-                alt="Contract Shield"
-                className="w-full"
-                fill
-              />
+              <video
+                src="/features/contract-shield.mp4"
+                className="size-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              ></video>
             </div>
           </motion.div>
         </div>

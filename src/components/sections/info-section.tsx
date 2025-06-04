@@ -1,7 +1,26 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import { useRef } from "react";
+
+// Component for individual character animation
+function AnimatedChar({
+  char,
+  index,
+  textProgress,
+}: {
+  char: string;
+  index: number;
+  textProgress: MotionValue<number>;
+}) {
+  const color = useTransform(
+    textProgress,
+    [index, index + 1],
+    ["rgba(255,255,255,0.3)", "rgba(255,255,255,1)"]
+  );
+
+  return <motion.span style={{ color }}>{char}</motion.span>;
+}
 
 export function InfoSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -14,20 +33,15 @@ export function InfoSection() {
   const spanText = "optimization so they can focus on building great dApps.";
   const secondText =
     "Developers can use our suite of AI-powered tools to optimize, secure, and deploy their applications without sacrificing performance or user experience.";
-
   const fullText = firstText + spanText + " " + secondText;
 
-  const typedChars = useTransform(
+  // Create a single transform for character progression
+  const textProgress = useTransform(
     scrollYProgress,
     [0, 1],
     [0, fullText.length]
   );
 
-  const getCharColor = (index: number) => {
-    return scrollYProgress.get() * fullText.length > index
-      ? "text-white"
-      : "text-white/30";
-  };
   return (
     <section ref={sectionRef} id="info" className="py-[140px] px-5">
       <motion.div
@@ -38,64 +52,32 @@ export function InfoSection() {
       >
         <p className="font-medium">
           {firstText.split("").map((char, index) => (
-            <motion.span
+            <AnimatedChar
               key={index}
-              className={`transition-colors duration-75 ${
-                scrollYProgress.get() * fullText.length > index
-                  ? "text-white"
-                  : "text-white/30"
-              }`}
-              style={{
-                color: useTransform(
-                  scrollYProgress,
-                  [index / fullText.length, (index + 1) / fullText.length],
-                  ["rgba(255,255,255,0.3)", "rgba(255,255,255,1)"]
-                ),
-              }}
-            >
-              {char}
-            </motion.span>
+              char={char}
+              index={index}
+              textProgress={textProgress}
+            />
           ))}
           <span>
             {spanText.split("").map((char, index) => (
-              <motion.span
+              <AnimatedChar
                 key={index + firstText.length}
-                style={{
-                  color: useTransform(
-                    scrollYProgress,
-                    [
-                      (index + firstText.length) / fullText.length,
-                      (index + firstText.length + 1) / fullText.length,
-                    ],
-                    ["rgba(255,255,255,0.3)", "rgba(255,255,255,1)"]
-                  ),
-                }}
-              >
-                {char}
-              </motion.span>
+                char={char}
+                index={index + firstText.length}
+                textProgress={textProgress}
+              />
             ))}
           </span>
         </p>
-
         <motion.p>
           {secondText.split("").map((char, index) => (
-            <motion.span
+            <AnimatedChar
               key={index + firstText.length + spanText.length + 1}
-              style={{
-                color: useTransform(
-                  scrollYProgress,
-                  [
-                    (index + firstText.length + spanText.length + 1) /
-                      fullText.length,
-                    (index + firstText.length + spanText.length + 2) /
-                      fullText.length,
-                  ],
-                  ["rgba(255,255,255,0.3)", "rgba(255,255,255,1)"]
-                ),
-              }}
-            >
-              {char}
-            </motion.span>
+              char={char}
+              index={index + firstText.length + spanText.length + 1}
+              textProgress={textProgress}
+            />
           ))}
         </motion.p>
       </motion.div>

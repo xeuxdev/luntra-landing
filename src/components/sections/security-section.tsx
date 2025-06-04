@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 export function SecuritySection() {
   return (
-    <section className="py-12 sm:py-16 md:py-20 lg:py-[100px] px-4 sm:px-5 space-y-10 sm:space-y-[40px] md:space-y-[60px] min-[1440px]:px-20">
-      <div className="space-y-8 sm:space-y-10 md:space-y-12 max-w-full sm:max-w-[750px] md:max-w-[850px] lg:max-w-[950px] mx-auto">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-[100px] px-4 sm:px-5 space-y-10 sm:space-y-[40px] md:space-y-[60px] min-[1440px]:px-20 overflow-x-hidden">
+      <div className="space-y-8 sm:space-y-10 md:space-y-12 max-w-full sm:max-w-[750px] md:max-w-[850px] lg:max-w-[950px] mx-auto ">
         <motion.h3
           className="text-3xl sm:text-4xl md:text-6xl lg:text-[82px] lg:leading-[90%] text-center max-w-full sm:max-w-[550px] md:max-w-[650px] lg:max-w-[750px] mx-auto font-medium"
           initial={{ opacity: 0, y: 20 }}

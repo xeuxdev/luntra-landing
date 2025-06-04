@@ -4,83 +4,86 @@ import Marquee from "react-fast-marquee";
 
 export function TestimonialSection() {
   return (
-    <section className="h-auto px-5 lg:px-10 py-12 sm:py-16 md:py-20 lg:h-[880px] lg:py-0 overflow-hidden w-fit mx-auto">
-      <div className="flex flex-col items-center justify-center lg:flex-row gap-8 sm:gap-12 md:gap-16 lg:gap-[90px] h-full px-4 sm:px-6 lg:px-0 relative">
-        <div className="max-w-[510px] max-md:text-center space-y-10">
-          <div className="space-y-4">
-            <p className="text-white/70 text-base sm:text-lg font-fragment font-normal -tracking-[4%]">
-              Real World Examples
-            </p>
-            <p className="text-3xl sm:text-4xl md:text-5xl lg:text-[82px] text-white">
-              Trusted by the community
-            </p>
-            <p className="text-3xl sm:text-4xl md:text-6xl lg:text-[82px]/[90%] font-medium"></p>
-          </div>
-          <button className="btn primary">Follow us on X</button>
-        </div>
-
-        {/* Testimonials Section */}
-        <div className="relative h-full w-full">
-          {/* Mobile/Tablet: Horizontal marquee */}
-          <div className="lg:hidden space-y-5 relative">
-            <Marquee gradient={false} speed={30} pauseOnHover={true} loop={0}>
-              {testimonials.map((testimonial, index) => (
-                <Card
-                  testimonial={testimonial}
-                  index={index}
-                  key={`marquee-${index}`}
-                />
-              ))}
-            </Marquee>
-
-            <Marquee
-              gradient={false}
-              speed={30}
-              pauseOnHover={true}
-              loop={0}
-              direction="right"
-            >
-              {testimonials.map((testimonial, index) => (
-                <Card
-                  testimonial={testimonial}
-                  index={index}
-                  key={`marquee-${index}`}
-                />
-              ))}
-            </Marquee>
+    <section className="w-full h-auto px-1 sm:px-4 lg:px-10 py-12 sm:py-16 md:py-20 lg:h-[880px] lg:py-0 overflow-hidden">
+      <div className="max-w-[1330px] mx-auto">
+        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 md:gap-16 lg:gap-[90px] h-full">
+          <div className="w-full lg:max-w-[510px] text-center lg:text-left space-y-6 lg:space-y-10">
+            <div className="space-y-4">
+              <p className="text-white/70 text-base sm:text-lg font-fragment font-normal -tracking-[4%]">
+                Real World Examples
+              </p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[82px] text-white font-medium lg:leading-[90%]">
+                Trusted by the community
+              </h2>
+            </div>
+            <button className="btn primary">Follow us on X</button>
           </div>
 
-          {/* Desktop: Vertical marquee columns */}
-          <div className="hidden lg:flex h-full max-h-[835px] relative gap-5 w-full overflow-hidden">
-            <div className="h-full overflow-hidden">
-              <div className="animate-marquee-up flex flex-col gap-5">
-                {[
-                  ...testimonials.slice(0, 3),
-                  ...testimonials.slice(0, 3),
-                  ...testimonials.slice(0, 3),
-                ].map((testimonial, index) => (
-                  <Card
-                    testimonial={testimonial}
-                    index={index}
-                    key={`col1-${index}`}
-                  />
+          {/* Testimonials Section */}
+          <div className="flex-1 lg:relative lg:h-full w-full">
+            {/* Mobile/Tablet: Horizontal marquee */}
+            <div className="lg:hidden space-y-5 w-full">
+              <Marquee
+                gradient={false}
+                speed={30}
+                pauseOnHover={true}
+                autoFill={true}
+                loop={0}
+              >
+                {testimonials.map((testimonial, index) => (
+                  <div key={`marquee-1-${index}`} className="mr-5">
+                    <Card testimonial={testimonial} index={index} />
+                  </div>
                 ))}
-              </div>
+              </Marquee>
+              <Marquee
+                gradient={false}
+                speed={30}
+                pauseOnHover={true}
+                direction="right"
+                autoFill={true}
+                loop={0}
+              >
+                {testimonials.map((testimonial, index) => (
+                  <div key={`marquee-2-${index}`} className="mr-5">
+                    <Card testimonial={testimonial} index={index} />
+                  </div>
+                ))}
+              </Marquee>
             </div>
 
-            <div className="h-full overflow-hidden">
-              <div className="animate-marquee-down flex flex-col gap-5">
-                {[
-                  ...testimonials.slice(3, 6),
-                  ...testimonials.slice(3, 6),
-                  ...testimonials.slice(3, 6),
-                ].map((testimonial, index) => (
-                  <Card
-                    testimonial={testimonial}
-                    index={index}
-                    key={`col2-${index}`}
-                  />
-                ))}
+            {/* Desktop: Vertical marquee columns */}
+            <div className="hidden lg:flex h-full max-h-[835px] relative gap-5 w-full overflow-hidden">
+              <div className="h-full overflow-hidden">
+                <div className="animate-marquee-up flex flex-col gap-5">
+                  {[
+                    ...testimonials.slice(0, 3),
+                    ...testimonials.slice(0, 3),
+                    ...testimonials.slice(0, 3),
+                  ].map((testimonial, index) => (
+                    <Card
+                      testimonial={testimonial}
+                      index={index}
+                      key={`col1-${index}`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              <div className="h-full overflow-hidden">
+                <div className="animate-marquee-down flex flex-col gap-5">
+                  {[
+                    ...testimonials.slice(3, 6),
+                    ...testimonials.slice(3, 6),
+                    ...testimonials.slice(3, 6),
+                  ].map((testimonial, index) => (
+                    <Card
+                      testimonial={testimonial}
+                      index={index}
+                      key={`col2-${index}`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -99,7 +102,7 @@ function Card({
 }) {
   return (
     <div
-      className="w-[300px] h-fit min-h-[250px] sm:w-[310px] rounded-lg py-6 sm:py-[30px] px-5 sm:px-[25px] flex flex-col justify-between gap-10"
+      className="w-[280px] sm:w-[300px] lg:w-[310px] h-fit min-h-[250px] rounded-lg py-6 sm:py-[30px] px-5 sm:px-[25px] flex flex-col justify-between gap-10 shrink-0"
       style={{ backgroundColor: testimonial.bg }}
       key={index}
     >

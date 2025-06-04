@@ -10,13 +10,15 @@ import { TestimonialSection } from "@/components/sections/testimonial-section";
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden">
+    <main>
       <HeroSection />
       <InfoSection />
       <FeaturesSection />
       <SecuritySection />
       <WhatYouCanBuildSection />
-      <TestimonialSection />
+      <div className="overflow-x-hidden">
+        <TestimonialSection />
+      </div>
       <PhasesSection />
       <CTASection />
       <Footer />
