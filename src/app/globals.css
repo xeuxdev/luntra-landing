@@ -63,6 +63,7 @@ button {
 }
 
 .card-border {
+  /* border: 1px solid #340001; */
   border: 1px solid #631a1a;
   /* border-image-source: linear-gradient(180deg, #631a1a 49.92%, #340001 100%); */
 }
@@ -135,7 +136,17 @@ button {
   animation-play-state: paused;
 }
 
-.vignette-overlay::after {
+.vignette {
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgb(0, 0, 0) 30%,
+    rgb(0, 0, 0) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.vignette::after {
   content: "";
   position: absolute;
   top: 0;
@@ -145,8 +156,8 @@ button {
   background: radial-gradient(
     circle at 50% 50%,
     rgba(0, 0, 0, 0) 40%,
-    /* Transparent center */ rgba(0, 0, 0, 0.9) 100%
-      /* Gradient fade to dark at edges */
+    rgba(0, 0, 0, 0.7) 100%
   );
-  pointer-events: none; /* Ensures the overlay doesn't interfere with interactions */
+  pointer-events: none;
+  /* box-shadow: inset 0 0 120px rgb(0, 0, 0); */
 }

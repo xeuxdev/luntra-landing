@@ -46,7 +46,7 @@ export function InfoSection() {
   return (
     <section ref={sectionRef} id="info" className="py-[140px] px-5">
       <motion.div
-        className="max-w-[727px] mx-auto w-full text-2xl md:text-[44px] leading-[114%] -tracking-[2%] space-y-10"
+        className="max-w-[727px] mx-auto w-full text-[36px]/[114%] md:text-[44px] leading-[114%] -tracking-[2%] space-y-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}

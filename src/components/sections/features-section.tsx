@@ -15,16 +15,13 @@ export function FeaturesSection() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-[82px] lg:leading-[90%] text-center max-w-full sm:max-w-[650px] md:max-w-[750px] mx-auto font-medium">
+        <h2 className="text-[50px] md:text-6xl lg:text-[82px] leading-[90%] text-center max-w-full sm:max-w-[650px] md:max-w-[750px] mx-auto font-medium">
           Built to help Developers{" "}
           <span className="text-[#FC0609]">build faster</span> with less
           complexity
         </h2>
 
-        <button
-          className="btn primary mx-auto"
-          style={{ width: "220px", height: "70px" }}
-        >
+        <button className="btn primary mx-auto !h-[60px] !md:h-[70px] w-full md:w-fit">
           Learn More
         </button>
       </motion.div>

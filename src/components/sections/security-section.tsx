@@ -8,7 +8,7 @@ export function SecuritySection() {
     <section className="py-12 sm:py-16 md:py-20 lg:py-[100px] px-4 sm:px-5 space-y-10 sm:space-y-[40px] md:space-y-[60px] min-[1440px]:px-20 overflow-x-hidden">
       <div className="space-y-8 sm:space-y-10 md:space-y-12 max-w-full sm:max-w-[750px] md:max-w-[850px] lg:max-w-[950px] mx-auto ">
         <motion.h3
-          className="text-3xl sm:text-4xl md:text-6xl lg:text-[82px] lg:leading-[90%] text-center max-w-full sm:max-w-[550px] md:max-w-[650px] lg:max-w-[750px] mx-auto font-medium"
+          className="text-[50px] md:text-6xl lg:text-[82px] leading-[90%] text-center max-w-full sm:max-w-[650px] md:max-w-[750px] mx-auto font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -24,27 +24,15 @@ export function SecuritySection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          {/* Mobile/tablet view */}
-          <div className="block md:hidden mx-auto w-full max-w-[350px] sm:max-w-[500px]">
-            <div className="relative w-full aspect-square">
-              <Image
-                src={"/security.png"}
-                alt=""
-                fill
-                className="object-contain"
-              />
-              <Image
-                src={"/circle.png"}
-                alt=""
-                fill
-                className="object-contain"
-              />
-            </div>
-          </div>
-
           {/* Desktop view - preserved original styling */}
-          <div className="hidden md:block absolute size-[936px] z-10 -top-[122px] left-4">
-            <Image src={"/security.png"} alt="" fill className="" />
+          <div className="hidden md:block absolute -z-10 size-[936px] -top-[122px] left-4">
+            <video
+              src="/security.mp4"
+              autoPlay
+              loop
+              muted
+              className="size-full object-cover"
+            />
           </div>
 
           <div className="hidden md:block absolute w-[950px] h-[690px] top-0">
@@ -54,47 +42,94 @@ export function SecuritySection() {
           <div className="relative z-20 w-full h-full max-h-[794px] space-y-8">
             {/* Mobile metrics in grid layout */}
             <motion.div
-              className="md:hidden grid grid-cols-2 gap-6 sm:gap-8 py-6"
+              className="md:hidden grid grid-cols-2 gap-4 sm:gap-6 py-6 relative"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <div className="space-y-2">
-                <p className="font-fragment text-lg sm:text-xl text-white/70">
-                  TPS
-                </p>
-                <p className="text-2xl sm:text-3xl font-medium tracking-[0%]">
-                  600+ on ETH DA
-                </p>
+              <div className="absolute inset-0 top-1/2 -translate-y-1/2 -z-10 aspect-square">
+                <video
+                  src="/security.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  className="size-full object-cover"
+                />
               </div>
+              <motion.div
+                className="rounded-[20px] p-px bg-[radial-gradient(183.77%_263.78%_at_13.28%_1.18%,rgba(225,_107,_85,_0.4)_0%,rgba(66,_0,_156,_0.4)_49.12%,rgba(225,_107,_85,_0.4)_100%)] h-[190px] overflow-hidden"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-background p-4 sm:p-6 flex flex-col justify-between size-full rounded-[20px]">
+                  <p className="font-fragment text-lg sm:text-xl text-white/70">
+                    TPS
+                  </p>
+                  <p className="text-2xl sm:text-3xl font-medium tracking-[0%]">
+                    600+ on
+                    <br />
+                    ETH DA
+                  </p>
+                </div>
+              </motion.div>
 
-              <div className="space-y-2 text-right">
-                <p className="font-fragment text-lg sm:text-xl text-white/70">
-                  Blocktime
-                </p>
-                <p className="text-2xl sm:text-3xl font-medium tracking-[0%]">
-                  1 second
-                </p>
-              </div>
+              <motion.div
+                className="rounded-[20px] p-px bg-[radial-gradient(183.77%_263.78%_at_13.28%_1.18%,rgba(225,_107,_85,_0.4)_0%,rgba(66,_0,_156,_0.4)_49.12%,rgba(225,_107,_85,_0.4)_100%)] h-[190px] overflow-hidden"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-background p-4 sm:p-6 flex flex-col justify-between size-full rounded-[20px]">
+                  <p className="font-fragment text-lg sm:text-xl text-white/70">
+                    Blocktime
+                  </p>
+                  <p className="text-2xl sm:text-3xl font-medium tracking-[0%]">
+                    1 second
+                  </p>
+                </div>
+              </motion.div>
 
-              <div className="space-y-2">
-                <p className="font-fragment text-lg sm:text-xl text-white/70">
-                  Fees
-                </p>
-                <p className="text-2xl sm:text-3xl font-medium tracking-[0%]">
-                  $0.0002 cents
-                </p>
-              </div>
+              <motion.div
+                className="rounded-[20px] p-px bg-[radial-gradient(183.77%_263.78%_at_13.28%_1.18%,rgba(225,_107,_85,_0.4)_0%,rgba(66,_0,_156,_0.4)_49.12%,rgba(225,_107,_85,_0.4)_100%)] h-[190px] overflow-hidden"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-background p-4 sm:p-6 flex flex-col justify-between size-full rounded-[20px]">
+                  <p className="font-fragment text-lg sm:text-xl text-white/70">
+                    Fees
+                  </p>
+                  <p className="text-2xl sm:text-3xl font-medium tracking-[0%]">
+                    $0.0002
+                    <br />
+                    cents
+                  </p>
+                </div>
+              </motion.div>
 
-              <div className="space-y-2 text-right">
-                <p className="font-fragment text-lg sm:text-xl text-white/70">
-                  DA Security
-                </p>
-                <p className="text-2xl sm:text-3xl font-medium tracking-[0%]">
-                  Ethereum 4844
-                </p>
-              </div>
+              <motion.div
+                className="rounded-[20px] p-px bg-[radial-gradient(183.77%_263.78%_at_13.28%_1.18%,rgba(225,_107,_85,_0.4)_0%,rgba(66,_0,_156,_0.4)_49.12%,rgba(225,_107,_85,_0.4)_100%)] h-[190px] overflow-hidden"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-background p-4 sm:p-6 flex flex-col justify-between size-full rounded-[20px]">
+                  <p className="font-fragment text-lg sm:text-xl text-white/70">
+                    DA Security
+                  </p>
+                  <p className="text-2xl sm:text-3xl font-medium tracking-[0%]">
+                    Ethereum
+                    <br />
+                    4844
+                  </p>
+                </div>
+              </motion.div>
             </motion.div>
 
             {/* Desktop layout - preserved original styling */}

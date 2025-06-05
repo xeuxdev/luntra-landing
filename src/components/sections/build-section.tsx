@@ -1,7 +1,7 @@
 export function WhatYouCanBuildSection() {
   return (
     <section id="build" className="relative max-w-[1330px] mx-auto">
-      <div className="lg:flex lg:min-h-[200vh]">
+      <div className="lg:flex lg:min-h-[200vh] max-lg:space-y-[60px] overflow-x-clip">
         {/* Left side - sticky video */}
 
         <div className="max-lg:aspect-square lg:w-[1033px] lg:h-[1000px] lg:sticky lg:-left-20 lg:-top-14  relative">
@@ -11,15 +11,15 @@ export function WhatYouCanBuildSection() {
               autoPlay
               loop
               muted
-              className="size-full object-cover"
+              className="size-full object-cover max-lg:size-[567px] max-lg:-mt-20"
             />
           </div>
-          <div className="absolute inset-0 bg-black/20 z-10" />
+          {/* <div className="absolute inset-0 bg-black/20 z-10" /> */}
         </div>
 
-        <div className="lg:w-1/2 relative py-[50px] px-5 lg:px-[50px] lg:py-[100px]">
-          <div className="space-y-[60px] min-h-screen flex flex-col justify-center">
-            <header className="text-3xl sm:text-4xl md:text-6xl lg:text-[82px] lg:leading-[90%] max-lg:text-center max-w-full sm:max-w-[650px] md:max-w-[750px] mx-auto font-medium">
+        <div className="lg:w-1/2 relative py-[50px] px-5 lg:px-[50px] lg:py-[100px] z-10">
+          <div className="space-y-[60px] min-h-screen flex flex-col justify-center overflow-y-hidden">
+            <header className="text-[50px] md:text-6xl lg:text-[82px] leading-[90%] max-w-full sm:max-w-[650px] md:max-w-[750px] mx-auto font-medium">
               What you can Build?
             </header>
 

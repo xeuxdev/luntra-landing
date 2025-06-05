@@ -15,7 +15,7 @@ export function TestimonialSection() {
               <p className="text-white/70 text-base sm:text-lg font-fragment font-normal -tracking-[4%]">
                 Real World Examples
               </p>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[82px] text-white font-medium lg:leading-[90%]">
+              <h2 className="text-[50px] md:text-6xl lg:text-[82px] leading-[90%] max-w-full sm:max-w-[650px] md:max-w-[750px] mx-auto font-medium">
                 Trusted by the community
               </h2>
             </div>
@@ -53,7 +53,7 @@ export function TestimonialSection() {
                 </div>
               </div>
             ) : (
-              <div className="flex h-full max-h-[835px] relative gap-5 w-full overflow-hidden vignette-overlay">
+              <div className="flex h-full max-h-[835px] relative gap-5 w-full overflow-hidden vignette">
                 <div className="h-full overflow-hidden">
                   <div className="animate-marquee-up flex flex-col gap-5">
                     {[...testimonials, ...testimonials, ...testimonials].map(

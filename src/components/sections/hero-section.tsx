@@ -16,7 +16,7 @@ export function HeroSection() {
                 Experience blazing-fast transactions, unmatched security, and
                 Ethereum compatibility with our optimistic rollup solution.
               </p>
-              <div className="flex gap-2.5 items-center flex-col *:w-full min-[450px]:flex-row">
+              <div className="flex gap-2.5 items-center flex-col *:w-full min-[400px]:flex-row">
                 <button className="btn primary">Start Building</button>
                 <button className="btn secondary">Read docs</button>
               </div>
