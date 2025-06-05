@@ -9,7 +9,7 @@ export function TestimonialSection() {
   return (
     <section className="w-full h-auto px-1 sm:px-4 lg:px-10 lg:pl-[120px] py-12 sm:py-16 md:py-20 lg:h-[880px] lg:py-0 overflow-hidden">
       <div className="max-w-[1330px] mx-auto overflow-x-clip">
-        <div className="flex flex-col lg:flex-row gap-20 lg:gap-[90px] h-full lg:justify-between">
+        <div className="flex flex-col lg:flex-row gap-20 lg:gap-[90px] h-full lg:justify-between lg:items-center">
           <div className="w-full lg:max-w-[510px] text-center lg:text-left space-y-6 lg:space-y-10">
             <div className="space-y-4">
               <p className="text-white/70 text-base sm:text-lg font-fragment font-normal -tracking-[4%]">
