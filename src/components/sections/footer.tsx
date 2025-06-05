@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import logo from "../../../public/luntra-logo.png";
 
 export function Footer() {
   return (
@@ -10,19 +12,7 @@ export function Footer() {
           <div className="space-y-10 max-w-[448px]">
             <div className="space-y-5">
               <div className="flex items-center gap-2">
-                <svg
-                  width="36"
-                  height="36"
-                  viewBox="0 0 36 36"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="size-13.5"
-                >
-                  <path
-                    d="M18 0.5C27.665 0.5 35.5 8.33502 35.5 18C35.5 27.665 27.665 35.5 18 35.5C8.33502 35.5 0.5 27.665 0.5 18C0.5 8.33502 8.33502 0.5 18 0.5ZM9.5 18.8174L18.3174 27.6338L27.1338 18.8174L18.3174 10L9.5 18.8174Z"
-                    fill="#E16B55"
-                  />
-                </svg>
+                <Image src={logo} alt="Logo" width={36} height={36} />
 
                 <span className="text-[27px]/[36px] font-bold">
                   Luntra Infrastructure
@@ -87,19 +77,7 @@ export function Footer() {
           {/* Logo and description */}
           <div className="space-y-5">
             <div className="flex items-center justify-center sm:justify-start gap-2">
-              <svg
-                width="36"
-                height="36"
-                viewBox="0 0 36 36"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="size-13.5"
-              >
-                <path
-                  d="M18 0.5C27.665 0.5 35.5 8.33502 35.5 18C35.5 27.665 27.665 35.5 18 35.5C8.33502 35.5 0.5 27.665 0.5 18C0.5 8.33502 8.33502 0.5 18 0.5ZM9.5 18.8174L18.3174 27.6338L27.1338 18.8174L18.3174 10L9.5 18.8174Z"
-                  fill="#E16B55"
-                />
-              </svg>
+              <Image src={logo} alt="Logo" width={36} height={36} />
 
               <span className="text-[27px]/[36px] font-bold">
                 Luntra Infrastructure
