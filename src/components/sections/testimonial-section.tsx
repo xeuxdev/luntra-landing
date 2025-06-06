@@ -2,6 +2,7 @@
 
 import { useMediaQuery } from "@/hooks/use-media-query";
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
 export function TestimonialSection() {
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -25,32 +26,28 @@ export function TestimonialSection() {
           {/* Testimonials Section */}
           <div className="lg:relative lg:h-full w-fit mx-auto">
             {isMobile ? (
-              <div className="space-y-5 w-full">
-                {/* <div className="overflow-hidden">
-                  <div className="animate-marquee-left flex gap-5 w-fit">
-                    {[...testimonials, ...testimonials].map(
-                      (testimonial, index) => (
-                        <Card
-                          testimonial={testimonial}
-                          key={`marquee-1-${index}`}
-                        />
-                      )
-                    )}
+              <div className="space-y-5 w-screen relative vignette-mobile">
+                <Marquee pauseOnHover direction="right" speed={30} autoFill>
+                  <div className="w-full flex gap-5 h-full ml-5">
+                    {testimonials.map((testimonial, index) => (
+                      <Card
+                        testimonial={testimonial}
+                        key={`marquee-1-${index}`}
+                      />
+                    ))}
                   </div>
-                </div> */}
+                </Marquee>
 
-                <div className="overflow-hidden">
-                  <div className="animate-marquee-right flex gap-5">
-                    {[...testimonials, ...testimonials].map(
-                      (testimonial, index) => (
-                        <Card
-                          testimonial={testimonial}
-                          key={`marquee-2-${index}`}
-                        />
-                      )
-                    )}
+                <Marquee pauseOnHover speed={30} autoFill>
+                  <div className="w-full flex gap-5 h-full ml-5">
+                    {testimonials.map((testimonial, index) => (
+                      <Card
+                        testimonial={testimonial}
+                        key={`marquee-1-${index}`}
+                      />
+                    ))}
                   </div>
-                </div>
+                </Marquee>
               </div>
             ) : (
               <div className="flex h-full max-h-[835px] relative gap-5 w-full overflow-hidden vignette">
@@ -88,7 +85,7 @@ function Card({ testimonial }: { testimonial: (typeof testimonials)[number] }) {
       className="w-[280px] sm:w-[300px] lg:w-[310px] h-fit min-h-[250px] rounded-lg py-6 sm:py-[30px] px-5 sm:px-[25px] flex flex-col justify-between gap-10 shrink-0"
       style={{ backgroundColor: testimonial.bg }}
     >
-      <p className="font-normal font-fragment text-base sm:text-lg leading-[135%] text-white">
+      <p className="font-normal font-fragment text-base sm:text-lg leading-[135%] text-white line-clamp-6">
         {testimonial.text}
       </p>
 
