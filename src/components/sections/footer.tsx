@@ -19,9 +19,7 @@ export function Footer() {
                 </span>
               </div>
               <p className="font-fragment text-sm/[155%] opacity-50">
-                Build amazing faster dapps like never before using Luntra
-                Infrastructure with the seamless integrated AI helping tracking
-                transactions and giving control to you.
+                AI meets blockchain innovation.
               </p>
             </div>
             <button className="btn primary">
@@ -84,9 +82,7 @@ export function Footer() {
               </span>
             </div>
             <p className="font-fragment text-sm/[155%] opacity-50 text-left">
-              Build amazing faster dapps like never before using Luntra
-              Infrastructure with the seamless integrated AI helping tracking
-              transactions and giving control to you.
+              Luntra Infrastructure: AI meets blockchain innovation.
             </p>
           </div>
 
