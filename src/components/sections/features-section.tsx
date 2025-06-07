@@ -58,10 +58,9 @@ export function FeaturesSection() {
                   address.
                 </p>
               </div>
-            </motion.div>
-            <div className="w-full space-y-5">
+            </motion.div>            <div className="w-full space-y-5 flex flex-col lg:h-[641px]">
               <motion.div
-                className="w-full py-8 md:py-[50px] px-5 md:px-[30px] card-border rounded-md space-y-6 md:space-y-[46px] lg:h-[310.5px]"
+                className="w-full py-8 md:py-[50px] px-5 md:px-[30px] card-border rounded-md space-y-6 md:space-y-[46px] flex-1 flex flex-col justify-center min-h-[250px]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -81,7 +80,7 @@ export function FeaturesSection() {
                 </div>
               </motion.div>
               <motion.div
-                className="w-full py-8 md:py-[50px] px-5 md:px-[30px] card-border rounded-md space-y-6 md:space-y-[46px] relative h-[220px] sm:h-[250px] md:h-[310.5px] flex items-center justify-center"
+                className="w-full py-8 md:py-[50px] px-5 md:px-[30px] card-border rounded-md space-y-6 md:space-y-[46px] relative flex-1 flex items-center justify-center min-h-[220px]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
