@@ -82,7 +82,7 @@ export function Footer() {
               </span>
             </div>
             <p className="font-fragment text-sm/[155%] opacity-50 text-left">
-              Luntra Infrastructure: AI meets blockchain innovation.
+              AI meets blockchain innovation.
             </p>
           </div>
 
