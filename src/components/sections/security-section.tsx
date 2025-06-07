@@ -121,12 +121,10 @@ export function SecuritySection() {
               >
                 <div className="bg-background p-4 sm:p-6 flex flex-col justify-between size-full rounded-[20px]">
                   <p className="font-fragment text-lg sm:text-xl text-white/70">
-                    DA Security
+                    Gas Savings:
                   </p>
                   <p className="text-2xl sm:text-3xl font-medium tracking-[0%]">
-                    Ethereum
-                    <br />
-                    4844
+                    18% <br /> reduction
                   </p>
                 </div>
               </motion.div>
@@ -175,10 +173,10 @@ export function SecuritySection() {
                 viewport={{ once: true }}
               >
                 <p className="font-fragment text-2xl text-white/70">
-                  DA Security
+                  Gas Savings:
                 </p>
                 <p className="text-[40px]/[90%] font-medium tracking-[0%] text-right">
-                  Ethereum 4844
+                  18% <br /> reduction
                 </p>
               </motion.div>
               <motion.div
@@ -203,8 +201,8 @@ export function SecuritySection() {
               viewport={{ once: true }}
             >
               <span>
-                Luntra Infrastructure = parallel + state minimized + native
-                account abstraction + native assets
+                Luntra Infrastructure = Hybrid Consensus + Hot-Swappable MLOps +
+                AI Model Marketplace
               </span>
             </motion.div>
           </div>

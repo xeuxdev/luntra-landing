@@ -37,7 +37,7 @@ export function FeaturesSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="relative aspect-square lg:absolute lg:size-[504px] lg:left-1/2 lg:-translate-x-1/2 -top-5">
+              <div className="relative aspect-square lg:absolute lg:size-[504px] lg:left-1/2 lg:-translate-x-1/2 -top-7">
                 <video
                   src="/features/ai-transaction.mp4"
                   className="absolute inset-0 w-full h-full object-cover"
@@ -47,14 +47,15 @@ export function FeaturesSection() {
                   playsInline
                 ></video>
               </div>
-              <div className="space-y-4 text-center mt-auto">
+              <div className="space-y-4 text-center mt-auto relative z-20">
                 <header className="text-3xl md:text-4xl leading-[90%]">
-                  AI Transaction Guardian
+                  ChainSage™ Wallet Intelligence
                 </header>
                 <p className="text-sm md:text-base/[135%] font-fragment text-white/70">
-                  Our chain uses OpenAI models to detect MEV patterns,
-                  reordering transactions to protect users from sandwich
-                  attacks.
+                  Advanced ML models transform blockchain data into actionable
+                  insights. Get transaction summaries, detect MEV attacks,
+                  receive Smart Wallet Scores. Instant intelligence for any
+                  address.
                 </p>
               </div>
             </motion.div>
@@ -70,11 +71,12 @@ export function FeaturesSection() {
 
                 <div className="space-y-2.5 text-center">
                   <header className="text-3xl md:text-4xl leading-[90%]">
-                    Seamless Access
+                    MEV Radar Protection
                   </header>
                   <p className="text-sm md:text-base">
-                    Access blockchain apps with Web2 simplicity and Web3
-                    security via our account
+                    Graph neural networks predict sandwich attacks before
+                    execution. Automatically reorder transactions through
+                    private relayer with gas refunds for users.
                   </p>
                 </div>
               </motion.div>
@@ -94,10 +96,12 @@ export function FeaturesSection() {
 
                 <div className="space-y-2.5 text-center">
                   <header className="text-3xl md:text-4xl leading-[90%]">
-                    Selective Privacy
+                    AgentX Autonomous Agents
                   </header>
                   <p className="text-sm md:text-base text-white/70">
-                    Conduct private transactions while maintaining
+                    AI agents own addresses and execute strategies without
+                    intervention. LangChain frameworks with vector memory manage
+                    portfolios, governance, and communication.
                   </p>
                 </div>
               </motion.div>
@@ -122,12 +126,12 @@ export function FeaturesSection() {
             </div>
             <div className="space-y-4 text-center w-full md:max-w-[336px] mt-4 md:mt-0 lg:mr-auto z-20">
               <header className="text-3xl md:text-4xl/[90%]">
-                Smart Gas Wizard
+                Paymaster+ Smart Accounts
               </header>
               <p className="text-sm/[135%] font-fragment text-white/70">
-                Our AI gas prediction system analyzes network conditions,
-                recommending optimal gas prices to save users 18% on costs
-                without sacrificing speed.
+                AI-driven gas policies with account abstraction. Analyze
+                behavior to sponsor fees, accept any ERC-20 payments, provide
+                dynamic discounts.
               </p>
             </div>
           </motion.div>
@@ -163,10 +167,12 @@ export function FeaturesSection() {
             </div>
             <div className="space-y-2.5 text-center px-4 md:px-6">
               <header className="text-3xl md:text-4xl">
-                Implementation Process
+                VerifyX ZK Identity
               </header>
               <p className="text-sm md:text-base text-white/70 lg:px-16">
-                Our system seamlessly integrates with all OP Stack
+                Zero-knowledge identity verification with privacy preservation.
+                Prove credentials without revealing data using Halo2 zkSNARKs
+                for instant verification.
               </p>
             </div>
           </motion.div>
@@ -180,11 +186,12 @@ export function FeaturesSection() {
           >
             <div className="space-y-4 text-center">
               <header className="text-3xl md:text-4xl leading-[90%]">
-                Contract Shield
+                Build-to-Earn Incentives
               </header>
               <p className="text-sm md:text-base font-fragment text-white/70">
-                Our AI scans smart contract code and transactions for
-                vulnerabilities, alerting users to risks before execution.
+                Merit-based rewards through automated performance analysis.
+                7-day AI evaluation assesses adoption, resilience, innovation
+                with tokens and badges.
               </p>
             </div>
 

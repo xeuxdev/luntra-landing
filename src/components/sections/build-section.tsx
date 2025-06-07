@@ -143,24 +143,24 @@ const items = [
     tag: "Gaming",
     title: "Level Up Your <br/> Gaming Experience",
     description:
-      "Your blockchain gaming platform deserves infrastructure that can keep up with the action. Our rollup chain delivers the speed, security, and simplicity gamers expect.",
+      "Real-time player analytics, front-running protection, AI NPCs, seamless player verification for blockchain games.",
   },
   {
-    tag: "App-Specific",
+    tag: "Applications",
     title: "Purpose-Built <br/> for Your Application",
     description:
-      "Create a customized blockchain experience tailored to your specific app requirements with infrastructure designed around your use case.",
+      "User behavior insights, gasless onboarding, automated functionality, privacy-preserving verification for consumer apps.",
   },
   {
     tag: "DeFi",
     title: "Secure, Efficient, <br/> and Fair DeFi Infrastructure",
     description:
-      "Build DeFi applications that protect users while maximizing capital efficiency. The foundation for DeFi innovations that users can trust with their assets.",
+      "Sandwich attack prevention, wallet risk scoring, automated strategies, flexible payments, compliant institutional access.",
   },
   {
     tag: "Enterprise",
     title: "Enterprise-Grade <br/> Blockchain Solutions",
     description:
-      "Bring blockchain efficiency to your organization with infrastructure built for business needs with the reliability and compliance enterprises require.",
+      "Compliant identity management, transaction monitoring, corporate gas policies, automated business processes.",
   },
 ];

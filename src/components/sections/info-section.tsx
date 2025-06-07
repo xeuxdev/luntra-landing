@@ -30,10 +30,11 @@ export function InfoSection() {
   });
 
   const firstText =
-    "Luntra Infrastructure helps developers automate blockchain security and ";
-  const spanText = "optimization so they can focus on building great dApps.";
+    "Automate blockchain security and optimization so you focus on building exceptional dApps.  ";
+  const spanText =
+    "Our AI transforms complex blockchain data into actionable insights seamlessly.";
   const secondText =
-    "Developers can use our suite of AI-powered tools to optimize, secure, and deploy their applications without sacrificing performance or user experience.";
+    "Get wallet intelligence, MEV protection, autonomous agents, flexible payments, and privacy verification with performance-based rewards.";
   const fullText = firstText + spanText + " " + secondText;
 
   // Create a single transform for character progression
