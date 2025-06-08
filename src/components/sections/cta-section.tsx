@@ -6,13 +6,14 @@ export function CTASection() {
           <div className="space-y-5 text-center">
             <h5 className="text-[44px] md:text-6xl lg:text-[82px] leading-[90%] text-center max-w-full sm:max-w-[650px] md:max-w-[750px] mx-auto font-medium text-pretty">
               Get <span className="text-[#FB0E0F]">Started</span> with Luntra
-              Infrastructure <span className="text-[#FB0E0F]">today</span> in
-              just 10 seconds
+              Infrastructure
             </h5>
             <p className="text-base/[155%] font-normal font-fragment opacity-70">
-              Luntra Infrastructure integrates with a wide range of blockchain
-              frameworks and development tools, making it easy to fit into your
-              existing dApp workflows and infrastructure.
+              Launch AI-powered dApps in seconds
+            </p>
+            <p className="text-base/[155%] font-normal font-fragment opacity-70">
+              Integrates with Hardhat, Foundry, Web3 libraries for seamless
+              development workflows.
             </p>
           </div>
 
