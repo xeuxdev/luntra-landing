@@ -13,12 +13,14 @@ export function HeroSection() {
             </h1>
             <div className="flex gap-[30px] flex-col">
               <p className="text-base text-white max-w-[388px] font-fragment">
-                Experience blazing-fast transactions, unmatched security, and
-                Ethereum compatibility with our optimistic rollup solution.
+                Experience blazing-fast transactions with AI-powered security
+                and Ethereum compatibility. Built on OP Stack with machine
+                intelligence - featuring wallet analysis, MEV protection, gas
+                optimization, and zero-knowledge identity verification.
               </p>
               <div className="flex gap-2.5 items-center flex-col *:w-full min-[400px]:flex-row">
                 <button className="btn primary">Start Building</button>
-                <button className="btn secondary">Read docs</button>
+                <button className="btn secondary">Read Docs</button>
               </div>
             </div>
           </div>
